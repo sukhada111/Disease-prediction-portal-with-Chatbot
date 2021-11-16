@@ -4,3 +4,56 @@
     Home
 {% endblock title %}
 
+{% block style %}
+{% load static %}
+
+<style>
+  .main-section{
+position: relative;
+background:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("{% static 'home/head_health.png'%}");
+height:500px;
+background-size: cover;
+}
+.main-section i{
+font-size:35px;
+color:#fff;
+position:absolute;
+left:50%;
+bottom:15px;
+transform: translateX(-50%);
+}
+.main-section .section-part{
+color:#fff;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+}
+@-webkit-keyframes blinker {
+from {opacity: 1.0;}
+to {opacity: 0.0;}
+}
+.blink{
+text-decoration: blink;
+-webkit-animation-name: blinker;
+-webkit-animation-duration: 0.6s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:ease-in-out;
+-webkit-animation-direction: alternate;
+}
+</style>
+
+{% endblock style %}
+{% block body %}
+<div class="container-fluid main-section">
+    <div class="row">
+    <div class="offset-lg-2 col-lg-8 section-part text-center">
+    <h1>Header Title</h1>
+    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore eta. Ut enim ad minim veniam,
+    quis nostrud exercgiat nulla deserunt mollit anim id est laborum.</P>
+    <button class="btn btn-danger">Click Me</button>
+    </div>
+    </div>
+    <i class="fa fa-angle-double-down blink" aria-hidden="true"></i>
+    </div>
+{% endblock body %}
