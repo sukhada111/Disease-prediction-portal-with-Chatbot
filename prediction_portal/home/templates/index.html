@@ -49,6 +49,9 @@ text-decoration: blink;
   font-size: 60px;
   margin-bottom: 3%;
 }
+.col-md-6{
+  height: 600px;
+}
 /* Buttons */
 .btn-header{
   background-color: #ee5253;
@@ -63,6 +66,7 @@ text-decoration: blink;
   border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 5%;
 }
 /* Section 1 */
 
@@ -76,12 +80,22 @@ h2{
   text-transform: uppercase;
   font-weight: 300;
 }
+@media screen and (max-width: 1024px) {
+  .image-column {
+    margin-top: -200px;
+    margin-bottom: -80px;
+  }
+}
+.col-md-12{
+  text-align: center;
+}
+
 </style>
 
 {% endblock style %}
 {% block body %}
 <div class="container-fluid main-section">
-    <div class="row">
+    <div class="row" >
       <div class="offset-lg-2 col-lg-8 section-part text-center">
         <h1 class="header_text">Header Title</h1>
         <P class="tagline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -93,7 +107,7 @@ h2{
     <i class="fa fa-angle-double-down blink" aria-hidden="true"></i>
 </div>
 <div class="container feature-section">
-  <div class="row">
+  <div class="row" style="margin-top: 80px; margin-bottom: -30px;">
     <div class="col-md-6 section-one-text">
       <h2>Mental wellness plays a role</h2>
       <p>
@@ -107,9 +121,54 @@ h2{
       <button class="btn btn-outline-danger">ChatBot >></button>
 
     </div>
-    <div class="col-md-6 d-sm-none d-md-block">
+    <div class="col-md-6 d-md-block image-column">
       <img src="{% static 'home/mental-health.jpg'%}" alt="Mental Health Image" width="100%" height="65%">
     </div>
+  </div>
+
+  <div class="row" style="margin-top: -100px;">
+    <div class="col-md-6 d-none d-md-block image-column">
+      <img src="{% static 'home/disease_pred.jpg'%}" alt="Mental Health Image" width="100%" height="65%">
+    </div>
+    <div class="col-md-6 section-one-text">
+      <h2>Get Medical Advice</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+      </p>
+      <button class="btn btn-outline-danger">Get Prediction >></button>
+    </div>
+    <div class="col-md-6 d-md-none d-sm-block image-column">
+      <img src="{% static 'home/disease_pred.jpg'%}" alt="Mental Health Image" width="100%" height="65%">
+    </div>
+    
+  </div>
+  <div class="row" style="margin-top: -100px; margin-bottom: -30px;">
+    <div class="col-md-6 section-one-text">
+      <h2>Know your Medicines</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+      </p>
+      <button class="btn btn-outline-danger">About Medicines >></button>
+
+    </div>
+    <div class="col-md-6 d-md-block image-column">
+      <img src="{% static 'home/medicine.jpg'%}" alt="Mental Health Image" width="100%" height="65%">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"><h2 class="heading-tips">Health and Nutrition Tips</h2></div>
   </div>
 </div>
 
