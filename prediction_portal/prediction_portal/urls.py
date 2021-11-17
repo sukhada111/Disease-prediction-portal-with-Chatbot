@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-import home.views
+from home import views
+from register import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home.views.home,name='home')
+    path('',views.home,name='home'),
+    path('register/',v.registration_view,name='register')
 ]

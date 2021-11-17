@@ -72,6 +72,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL='register.Register'
+
 WSGI_APPLICATION = 'prediction_portal.wsgi.application'
 
 
