@@ -10,8 +10,8 @@
 <style>
   .main-section{
 position: relative;
-background:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("{% static 'home/head_health.png'%}");
-height:500px;
+background:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("{% static 'home/head3.png'%}");
+height:550px;
 background-size: cover;
 }
 .main-section i{
@@ -40,20 +40,77 @@ text-decoration: blink;
 -webkit-animation-timing-function:ease-in-out;
 -webkit-animation-direction: alternate;
 }
+
+.header_text, .tagline{
+  font-family: 'Proza Libre', sans-serif;
+  }
+
+.header_text{
+  font-size: 60px;
+  margin-bottom: 3%;
+}
+/* Buttons */
+.btn-header{
+  background-color: #ee5253;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.btn-outline-danger{
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Section 1 */
+
+.section-one-text{
+  padding-top: 5%;
+}
+/* H2 */
+h2{
+  font-family: 'Lato', sans-serif; 
+  color: #444;
+  text-transform: uppercase;
+  font-weight: 300;
+}
 </style>
 
 {% endblock style %}
 {% block body %}
 <div class="container-fluid main-section">
     <div class="row">
-    <div class="offset-lg-2 col-lg-8 section-part text-center">
-    <h1>Header Title</h1>
-    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore eta. Ut enim ad minim veniam,
-    quis nostrud exercgiat nulla deserunt mollit anim id est laborum.</P>
-    <button class="btn btn-danger">Click Me</button>
-    </div>
+      <div class="offset-lg-2 col-lg-8 section-part text-center">
+        <h1 class="header_text">Header Title</h1>
+        <P class="tagline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.</P>
+        <button class="btn btn-danger btn-header">Explore</button>
+      </div>
     </div>
     <i class="fa fa-angle-double-down blink" aria-hidden="true"></i>
+</div>
+<div class="container feature-section">
+  <div class="row">
+    <div class="col-md-6 section-one-text">
+      <h2>Mental wellness plays a role</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore eta. Ut enim ad minim veniam,
+        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+      </p>
+      <button class="btn btn-outline-danger">ChatBot >></button>
+
     </div>
+    <div class="col-md-6 d-sm-none d-md-block">
+      <img src="{% static 'home/mental-health.jpg'%}" alt="Mental Health Image" width="100%" height="65%">
+    </div>
+  </div>
+</div>
+
 {% endblock body %}
