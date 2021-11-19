@@ -90,6 +90,10 @@ h2{
   text-align: center;
 }
 
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 </style>
 
 {% endblock style %}
@@ -110,13 +114,9 @@ h2{
   <div class="row" style="margin-top: 80px; margin-bottom: -30px;">
     <div class="col-md-6 section-one-text">
       <h2>Mental wellness plays a role</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+      <p  style="text-align:justify;">
+        Mental health plays a major role in people’s ability to maintain a good physical health. Mental illness, such as depression and anxiety, affect people’s ability to participate in health-promoting behaviours. Furthermore, the advent of pandemic has further worsened the mental-health conditions of the people worldwide. We aim at providing health-related assistance and solving mental-health issues using an AI Chatbot through which the patients can converse openly and get health related guidance.
+
       </p>
       <button class="btn btn-outline-danger">ChatBot >></button>
 
@@ -132,13 +132,8 @@ h2{
     </div>
     <div class="col-md-6 section-one-text">
       <h2>Get Medical Advice</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+      <p  style="text-align:justify;">
+        Not feeling well ? Tell us your symptoms and we would help you by predicting the possible diseases. Use our Disease Predictor to get accurate predictions and Probabilistic Outcomes of all the possible diseases.
       </p>
       <button class="btn btn-outline-danger">Get Prediction >></button>
     </div>
@@ -148,15 +143,10 @@ h2{
     
   </div>
   <div class="row" style="margin-top: -100px; margin-bottom: -30px;">
-    <div class="col-md-6 section-one-text">
+    <div class="col-md-6 section-one-text"> 
       <h2>Know your Medicines</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.
+      <p style="text-align:justify;">
+        To know your medicine, enter the name of the medicine and all the uses, side effects and alternatives for this medicine will be retrieved and displayed on your screen.
       </p>
       <button class="btn btn-outline-danger">About Medicines >></button>
 
@@ -168,7 +158,71 @@ h2{
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-md-12"><h2 class="heading-tips">Health and Nutrition Tips</h2></div>
+    <div class="col-md-12 mb-4"><h2 class="heading-tips">Health and Nutrition Tips</h2></div>
+  </div>
+  <div class="card-deck mb-4" style="text-align:justify;">
+    <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <p style="text-align:center;"><i class="fa fa-cutlery" aria-hidden="true" style="font-size:40px;color:#ee5253;"></i></p>
+            </div>
+            <div class="col-sm-8">
+              <p class="card-text" style="vertical-align: middle;font-family:Proza Libre;">Eat a variety of foods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+
+
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <p style="text-align:center;"><i class="fa fa-tint" aria-hidden="true" style="font-size:40px;color:#10ac84;"></i></p>
+            </div>
+            <div class="col-sm-8">
+              <p class="card-text" style="vertical-align: middle;font-family:Proza Libre;">Enjoy plenty of fruits and vegetables</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+    <div class="card-deck mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <p style="text-align:center;"><i class="fa fa-user-md" aria-hidden="true" style="font-size:40px;color:#10ac84;"></i></p>
+              </div>
+              <div class="col-sm-8">
+                <p class="card-text" style="vertical-align: middle;font-family:Proza Libre;">Maintain a healthy body weight</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <p style="text-align:center;"> <i class="fa fa-medkit" aria-hidden="true" style="font-size:40px;color:#ee5253;"></i></p>
+              </div>
+              <div class="col-sm-8">
+                <p class="card-text" style="vertical-align: middle;font-family:Proza Libre;">Get on the move, make it a habit!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 
