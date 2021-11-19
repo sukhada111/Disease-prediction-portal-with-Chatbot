@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Register
+{% endblock title %}
+
+{% block style %}
+
+{% load static %}
+
+{% endblock style %}
+
+{% block body %}
+
+<!-- <form method="post">{% csrf_token %}
+	{% for field in registration_form %}
+		<p>
+			{{field.label_tag}}
+			{{field}}
+            
+
+			{% if field.help_text %}
+				<small style="color: grey;">{{field.help_text}}</small>
+			{% endif %}
+
+			{% for error in field.errors %}
+				<p style="color: red;">{{error}}</p>
+			{% endfor %}
+		</p>
+	{% endfor %}
+	<button type="submit">Register</button>
+	
+</form> -->
+<style>
+	/* Buttons */
+.btn-header{
+  background-color: #ee5253;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+  text-transform: uppercase;
+}
+</style>
+
+<section class="vh-100" style="background-color: #eee;">
+	<div class="container h-100">
+	  <div class="row d-flex justify-content-center align-items-center h-100">
+		<div class="col-lg-10 col-xl-11"><br><br>
+		  <div class="card text-black" style="border-radius: 25px;">
+			<div class="card-body p-md-5">
+			  <div class="row justify-content-center">
+				<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+				  <!-- <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-6">Sign up</p> -->
+				  <h2 style="margin-left:60px;">Login</h2>
+					<br><br>
+					{% if error %}
+              <div class="alert alert-danger" role="alert">
+                  {{ error }}
+              </div>
+            {% endif %}
+				  <form class="mx-1 mx-md-4 loginForm" method="POST">
+					{% csrf_token %}
+					
+					<div class="d-flex flex-row align-items-center mb-4">
+					  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+					  <div class="form-outline flex-fill mb-0">
+						<label class="form-label" for="form3Example3c">Your Email:</label>
+						<input type="email" name="email" id="form3Example3c" class="form-control" required/>
+						
+					  </div>
+					</div>
+  <br>
+					<div class="d-flex flex-row align-items-center mb-4">
+					  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+					  <div class="form-outline flex-fill mb-0">
+						<label class="form-label" for="form3Example4c">Your Password:</label>
+						<input type="password" name="password" id="form3Example4c" class="form-control" required />
+						
+					  </div>
+					</div>
+  
+					
+					<button type="submit" class="btn btn-danger btn-header" style="margin-left: 40px;">Login</button>
+  
+				  </form>
+  
+				</div>
+				<div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-2 order-lg-2">
+  
+				  <img src="{%static 'signup2.jpg' %}" class="img-fluid" alt="login image">
+  
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+{% endblock body %}
+</section>

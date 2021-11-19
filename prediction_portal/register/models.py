@@ -41,11 +41,12 @@ class Register(AbstractBaseUser):
     is_active=models.BooleanField(default=True)
     is_staff=models.BooleanField(default=False)
     is_superuser=models.BooleanField(default=False)
-    first_name=models.CharField(max_length=50,null=True)
-    last_name=models.CharField(max_length=50,null=True)
+    name=models.CharField(max_length=50,null=True)
+    # last_name=models.CharField(max_length=50,null=True)
     phone_regex=RegexValidator(regex=r'^[0-9]{10}$', message="Phone number must contain 10 digits only.")
-    phone_number=models.CharField(validators=[phone_regex], max_length=10, blank=True)
-    age=models.PositiveSmallIntegerField(null=True)
+    phone_number=models.CharField(validators=[phone_regex], max_length=10, blank=True,null=True)
+    age=models.PositiveSmallIntegerField(blank=True,null=True)
+    gender=models.CharField(max_length=20,blank=True,null=True)
 
     
     USERNAME_FIELD='email'

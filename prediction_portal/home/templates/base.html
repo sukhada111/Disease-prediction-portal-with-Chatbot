@@ -102,15 +102,18 @@ footer p{
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home </a>
+                  <a class="nav-link" href="{% url 'home' %}">Home </a>
                 </li>
+                {% if request.user.is_authenticated %}
                 <li class="nav-item">
                   <a class="nav-link" href="#">ChatBot</a>
                 </li>
+
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Explore
                   </a>
+
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Disease Prediction</a>
                     <a class="dropdown-item" href="#">Medicine Information</a>
@@ -118,14 +121,28 @@ footer p{
                   </div>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link" href="#" onclick="$('#signOutBtn').click()" >Logout</a>
+                <form style='display: none;' method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    
+                    <button id="signOutBtn" type="submit">Logout</button>
+                </form>
+              </li>
+
+                
+                {% else %}
+                <li class="nav-item">
                   <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sign Up</a>
+                  <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Login</a>
+                  <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
+
+                {% endif %}
+
                 
                
               </ul>

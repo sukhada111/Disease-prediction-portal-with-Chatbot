@@ -1,36 +1,149 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Register
+    Home
 {% endblock title %}
 
 {% block style %}
-
 {% load static %}
+
+<style>
+	/* Buttons */
+.btn-header{
+  background-color: #ee5253;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+  text-transform: uppercase;
+}
+</style>
 
 {% endblock style %}
 
 {% block body %}
 
-<form method="post">{% csrf_token %}
-	{% for field in registration_form %}
-		<p>
-			{{field.label_tag}}
-			{{field}}
-            
 
-			{% if field.help_text %}
-				<small style="color: grey;">{{field.help_text}}</small>
-			{% endif %}
+<section class="h-100 h-custom" style="background-color:  #eee;">
+ 
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <img src="{%static 'login.jpg' %}" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Signup pic">
+            <div class="card-body p-4 p-md-5" style="margin-left: 50px;">
+              <h3 class="mb-2 pb-2 pb-md-0 mb-md-5 px-md-2" style="margin-left: 50px;">Registration Info</h3>
+              
+              {% if error %}
+              <div class="alert alert-danger" role="alert">
+                  {{ error }}
+              </div>
+            {% endif %}
+              
+  
+                <!-- <div class="form-outline mb-4">
+                  <input type="text" id="form3Example1q" class="form-control" />
+                  <label class="form-label" for="form3Example1q">Name</label>
+                </div> -->
+                <form class="px-5 mx-md-4 signupForm" method="post" >
+                  {% csrf_token %}
+					<!-- <div class="d-flex flex-row align-items-center mb-4">
+					  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+					  <div class="form-outline flex-fill mb-0">
+						<input type="text" id="form3Example1c" class="form-control" />
+						<label class="form-label" for="form3Example1c">Your Name</label>
+					  </div>
+					</div> -->
+  
+					<div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user"></i>
+					  <div class="form-outline flex-fill mb-0">
+						<label class="form-label" for="form3Example3c">* Username:</label>
+						<input type="text" name="username" id="form3Example3c" class="form-control" required/>
+						<small id="usernameHelp" class="form-text text-muted">Your username must be unique.</small>
+					  </div>
+					</div>
+         
+  
+					<div class="d-flex flex-row align-items-center mb-4">
+					  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+					  <div class="form-outline flex-fill mb-0">
+						<label class="form-label" for="form3Example4c">* Set Password:</label>
+						<input type="password" name="password1" id="form3Example4c" class="form-control" required />
+						<small id="passHelp" class="form-text text-muted">Password must be of at least 8 characters containing a Uppercase letter, lowercase letter and a special symbol.</small>
+					  </div>
+					</div>
+          <div class="d-flex flex-row align-items-center mb-3">
+					  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+					  <div class="form-outline flex-fill mb-0">
+						<label class="form-label" for="form3Example4c">* Confirm Password:</label>
+						<input type="password" name="password2" id="form3Example4c" class="form-control" required/>
+						
+					  </div>
+					</div>
 
-			{% for error in field.errors %}
-				<p style="color: red;">{{error}}</p>
-			{% endfor %}
-		</p>
-	{% endfor %}
-	<button type="submit">Register</button>
-	
-</form>
+                    <div class="d-flex flex-row align-items-center mb-3">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c">* Name:</label>
+                          <input type="text" name="name" id="form3Example3c" class="form-control" required/>
+                          
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-3">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c">* Email Address:</label>
+                          <input type="email" name="email" id="form3Example3c" class="form-control" required/>
+                          
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-3">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c">Phone Number:</label>
+                          <input type="text" name="phone_number" id="form3Example3c" class="form-control" />
+                          
+                        </div>
+                      </div>
+               
+                      <div class="d-flex flex-row align-items-center mb-3">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c">Age:</label>
+                          <input type="text" name="age" id="form3Example3c" class="form-control"/>
+                          
+                        </div>
+                      </div>
+  
+                <div class="row">
+                 
+                  <div class="col-md-6 mb-4">
+                    <label class="form-label" for="form3Example1w">Gender:</label>
+                    <select class="select" name="gender">
+                      <option value="1" selected disabled>Select</option>
+                      <option value="Female">Female</option>
+                      <option value="Male">Male</option>
+                      <option value="Other">Other</option>
+                    </select>
+  
+                  </div>
+                </div>
+  
+  
+                  <button type="submit" class="btn btn-danger btn-header" style="margin-left: 40px;">Sign Up</button>
+  
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-{% endblock body %}
+  {% endblock body %}
+</section>

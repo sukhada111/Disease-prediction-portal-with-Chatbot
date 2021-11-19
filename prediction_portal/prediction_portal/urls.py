@@ -23,5 +23,9 @@ from register import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('register/',v.registration_view,name='register')
+    path('register/',v.registration_view,name='register'),
+    path('login/',v.login_view,name='login'),
+     path('logout/',v.logout_view,name='logout')
+
+
 ]
