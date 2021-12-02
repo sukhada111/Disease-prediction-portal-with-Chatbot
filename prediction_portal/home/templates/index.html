@@ -148,7 +148,7 @@ div.card {
       <p style="text-align:justify;">
         To know your medicine, enter the name of the medicine and all the uses, side effects and alternatives for this medicine will be retrieved and displayed on your screen.
       </p>
-      <button class="btn btn-outline-danger">About Medicines >></button>
+      <a href="{% url 'medicine_info' %}"><button class="btn btn-outline-danger"> About Medicines >></button></a> 
 
     </div>
     <div class="col-md-6 d-md-block image-column">
@@ -177,8 +177,6 @@ div.card {
       </div>
     </div>
     <div class="card">
-
-
       <div class="card-body">
         <div class="container">
           <div class="row">

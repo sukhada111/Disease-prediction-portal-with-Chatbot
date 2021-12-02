@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'chatbot.apps.ChatbotConfig',
     'register.apps.RegisterConfig',
+    'medicine_info.apps.MedicineInfoConfig',
 ]
 
 MIDDLEWARE = [
