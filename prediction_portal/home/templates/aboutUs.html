@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Medicine Information
+{% endblock title %}
+
+{% block style %}
+
+{% load static %}
+
+<style>
+    .main-section{
+  position: relative;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("{% static 'home/head_trial.jpg'%}");
+  height:300px;
+  background-size: cover;
+  background-position: center;
+        
+}
+  .main-section i{
+  font-size:35px;
+  color:#fff;
+  position:absolute;
+  left:50%;
+  bottom:15px;
+  transform: translateX(-50%);
+  }
+  .main-section .section-part{
+  color:#fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+  @-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+  }
+  .blink{
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
+  }
+  
+  .header_text, .tagline{
+    font-family: 'Proza Libre', sans-serif;
+    }
+  
+  .header_text{
+    font-size: 60px;
+    margin-bottom: 3%;
+  }
+  .col-md-6{
+    height: 600px;
+  }
+  /* Buttons */
+  .btn-header{
+    background-color: #ee5253;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Lato', sans-serif; 
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .btn-outline-danger{
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5%;
+  }
+  /* Section 1 */
+  
+  .section-one-text{
+    padding-top: 5%;
+  }
+  /* H2 */
+  h2{
+    font-family: 'Lato', sans-serif; 
+  color: #444;
+  text-transform: uppercase;
+  font-weight: 300;
+  }
+  h2:after{
+    display: block;
+    height: 2px;
+    background-color:#ee5253;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+</style>
+
+
+
+{% endblock style %}
+{% block body %}
+<div class="container-fluid main-section">
+    <div class="row" >
+      <div class="offset-lg-2 col-lg-8 section-part text-center">
+        <h1 class="header_text">About Us</h1>
+    
+      </div>
+    </div>
+</div>
+
+<div class="container offset-lg-2 col-lg-8 text-center" style="margin-top: 5%;">
+    <h2>Healthino - Improving Lives Together</h2>
+    <p>
+        The personal health monitoring of each individual is considered very important because of the ever-increasing rise in health problems. Moreover, Mental health plays a major role in people’s ability to maintain a good physical health. 
+</p>
+<p>
+Although it is advisable to visit the doctor whenever possible, as discussed above if due to unavailability of specialist due to some reason, an Intelligent HealthCare Portal offers an effective alternative.
+</p>
+<p>
+Our portal aims to provide preliminary precautions about the predicted disease which will help the patient to tackle the symptoms till the time he/she receives assistance from a medical expert.
+</p>
+<p>
+Our portal aims at providing health-related assistance and solving mental-health issues using an AI Chatbot through which the patients can converse openly and get health related guidance.
+
+    </p>
+</div>
+
+  {% endblock body %}

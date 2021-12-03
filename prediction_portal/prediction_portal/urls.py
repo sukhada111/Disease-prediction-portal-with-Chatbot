@@ -24,6 +24,7 @@ from medicine_info import views as view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
+    path('aboutUs/',views.aboutUs,name='aboutUs'),
     path('medicine_info/',view.medicine_info, name='medicine_info'),
     path('register/',v.registration_view,name='register'),
     path('login/',v.login_view,name='login'),

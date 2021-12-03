@@ -10,7 +10,7 @@
 <style>
   .main-section{
 position: relative;
-background:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("{% static 'home/header1.png'%}");
+background:linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url("{% static 'home/header1.png'%}");
 height:530px;
 background-size: cover;
 }
@@ -46,7 +46,7 @@ text-decoration: blink;
   }
 
 .header_text{
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 3%;
 }
 .col-md-6{
@@ -80,6 +80,19 @@ h2{
   text-transform: uppercase;
   font-weight: 300;
 }
+.welcome:after{
+    display: block;
+    height: 2px;
+    background-color:#ee5253;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+.welcome{
+  margin-top: 5%;
+}
 @media screen and (max-width: 1024px) {
   .image-column {
     margin-top: -200px;
@@ -101,15 +114,23 @@ div.card {
 <div class="container-fluid main-section">
     <div class="row" >
       <div class="offset-lg-2 col-lg-8 section-part text-center">
-        <h1 class="header_text">Header Title</h1>
-        <P class="tagline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore eta. Ut enim ad minim veniam,
-        quis nostrud exercgiat nulla deserunt mollit anim id est laborum.</P>
+        <h1 class="header_text">Healthino - Improving Lives Together</h1>
+        <P class="tagline">The personal health monitoring assistant of every individual. The portal aims at providing health-related assistance and solving mental-health issues using an AI Chatbot through which the patients can converse openly and get health related guidance.
+        </P>
         <button class="btn btn-danger btn-header">Explore</button>
       </div>
     </div>
     <i class="fa fa-angle-double-down blink" aria-hidden="true"></i>
 </div>
+{% if request.user.is_authenticated %}
+<div class="container">
+  <div class="row">
+    <div class="offset-lg-2 col-lg-8 text-center">
+    <h2 class="welcome">Hello {{ user.username }}! </h2>
+  </div>
+  </div>
+</div>
+{% endif %}
 <div class="container feature-section">
   <div class="row" style="margin-top: 80px; margin-bottom: -30px;">
     <div class="col-md-6 section-one-text">

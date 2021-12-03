@@ -105,6 +105,9 @@ footer p{
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'home' %}">Home </a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'aboutUs' %}">About Us</a>
+                </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
                   <a class="nav-link" href="#">ChatBot</a>
@@ -132,9 +135,7 @@ footer p{
 
                 
                 {% else %}
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
-                </li>
+               
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
                 </li>
