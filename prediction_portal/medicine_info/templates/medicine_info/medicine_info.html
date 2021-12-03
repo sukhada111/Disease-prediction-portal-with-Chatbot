@@ -76,6 +76,7 @@
   }
   /* H2 */
   h2{
+    font-size: 20px;
     font-family: 'Lato', sans-serif; 
     color: #444;
     text-transform: uppercase;
@@ -83,6 +84,20 @@
   }
 
 </style>
+
+<style>
+	/* Buttons */
+.btn-header{
+  background-color: #ee5253;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+  text-transform: uppercase;
+}
+</style>
+
 {% endblock style %}
 {% block body %}
 <div class="container-fluid main-section">
@@ -96,28 +111,54 @@
     </div>
 </div>
 
-<div class="container info_section" style="margin-top: 7%;">
-    <div class="row ">
-        <div class="col">
-            <div class="card" style="width: 50rem;">
-                <div class="card-body">
-                  <h2 class="card-title">Get medicine Information</h2>
-                  <div>
-                <form method="POST">
-                {% csrf_token %}
-                <div class="input-group form-group" style="">
-                    <input type="text" name="movie" class="form-control textt" placeholder="Enter Medicine Name">
-                   
-                  </div>
-                  <br><br>
-                    <button type="submit" class="btn btn-danger btn-header" style="margin-left: 45%;">Submit</button>
-                </form>
-                  </div>
-                </div>
+<section class="vh-100" style="background-color:#f7ebed">
+	<div class="container h-100">
+	  <div class="row d-flex justify-content-center align-items-center h-100">
+		<div class="col-lg-10 col-xl-11"><br><br>
+		  <div class="card text-black" style="border-radius: 25px;">
+			<div class="card-body p-md-5">
+			  <div class="row justify-content-center">
+				<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+				  <!-- <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-6">Sign up</p> -->
+				  <h2 style="margin-left:20px;">Get Medicine Information</h2>
+					<br><br>
+					{% if error %}
+              <div class="alert alert-danger" role="alert">
+                  {{ error }}
               </div>
-           
-        </div>
-    </div>
-</div>
+            {% endif %}
+				  <form class="mx-1 mx-md-4 loginForm" method="POST">
+					{% csrf_token %}
+					
+					<div class="d-flex flex-row align-items-center mb-4">
+					  <!-- <i class="fas fa-envelope fa-lg me-3 fa-fw"></i> -->
+					  <div class="form-outline flex-fill mb-0">
+						<label class="form-label" for="form3Example3c">Enter Medicine Name:</label>
+						<input type="email" name="email" id="form3Example3c" class="form-control" required/>
+						
+					  </div>
+					</div>
+  <br>
+					
+  
+					
+					<button type="submit" class="btn btn-danger btn-header" style="margin-left: 40px;">SUBMIT</button>
+  
+				  </form>
+  
+				</div>
+				<div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-2 order-lg-2">
+  
+				  <img src="{%static 'med2.jpg' %}" class="img-fluid" alt="login image">
+  
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
 
-{% endblock body %}
+  {% endblock body %}
+</section>
