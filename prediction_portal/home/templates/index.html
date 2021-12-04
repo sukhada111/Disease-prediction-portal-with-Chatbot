@@ -156,7 +156,7 @@ div.card {
       <p  style="text-align:justify;">
         Not feeling well ? Tell us your symptoms and we would help you by predicting the possible diseases. Use our Disease Predictor to get accurate predictions and Probabilistic Outcomes of all the possible diseases.
       </p>
-      <button class="btn btn-outline-danger">Get Prediction >></button>
+      <a href="{% url 'prediction' %}"><button class="btn btn-outline-danger"> Get Predictions >></button></a> 
     </div>
     <div class="col-md-6 d-md-none d-sm-block image-column">
       <img src="{% static 'home/disease_pred.jpg'%}" alt="Mental Health Image" width="100%" height="65%">
