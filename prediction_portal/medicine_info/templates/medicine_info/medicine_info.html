@@ -82,6 +82,25 @@
     text-transform: uppercase;
     font-weight: 300;
   }
+  .welcome:after{
+    display: block;
+    height: 2px;
+    background-color:#ee5253;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+.welcome{
+  margin-top: 5%;
+}
+
+.card-title{
+
+  color: #eb4d4b;
+  font-weight: 600;
+}
 
 </style>
 
@@ -96,6 +115,25 @@
   font-weight: 300;
   text-transform: uppercase;
 }
+
+.top-picks .card{
+  font-family: 'Proza Libra', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(105,105,105, 0.2), 0 6px 20px 0 rgba(105,105,105, 0.19);
+
+}
+
+.top-picks .card:hover {
+    transform: scale(1.03);
+}
+.top-picks .card{
+  margin-bottom: 40px;
+}
+.rec .card:hover{
+
+    transform: scale(1.03);
+}
+ 
+
 </style>
 
 {% endblock style %}
@@ -123,19 +161,15 @@
 				  <!-- <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-6">Sign up</p> -->
 				  <h2 style="margin-left:20px;">Get Medicine Information</h2>
 					<br><br>
-					{% if error %}
-              <div class="alert alert-danger" role="alert">
-                  {{ error }}
-              </div>
-            {% endif %}
-				  <form class="mx-1 mx-md-4 loginForm" method="POST">
+				
+				  <form class="mx-1 mx-md-4 medForm" method="POST">
 					{% csrf_token %}
 					
 					<div class="d-flex flex-row align-items-center mb-4">
 					  <!-- <i class="fas fa-envelope fa-lg me-3 fa-fw"></i> -->
 					  <div class="form-outline flex-fill mb-0">
 						<label class="form-label" for="form3Example3c">Enter Medicine Name:</label>
-						<input type="email" name="email" id="form3Example3c" class="form-control" required/>
+						<input type="text" name="med" id="form3Example3c" class="form-control" required/>
 						
 					  </div>
 					</div>
@@ -146,11 +180,17 @@
 					<button type="submit" class="btn btn-danger btn-header" style="margin-left: 40px;">SUBMIT</button>
   
 				  </form>
-  
+<br>
+          {% if error %}
+          <div class="alert alert-danger" role="alert">
+              {{ error }}
+          </div>
+        {% endif %}
+         
 				</div>
 				<div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-2 order-lg-2">
   
-				  <img src="{%static 'med2.jpg' %}" class="img-fluid" alt="login image">
+				  <img src="{%static 'disease_pred/med2.jpg' %}" class="img-fluid" alt="login image">
   
 				</div>
 			  </div>
@@ -160,5 +200,88 @@
 	  </div>
 	</div>
 
+  {% if l1 %}
+
+  <section class="top-picks">
+    <div class="container">
+      <div class="row heading offset-4">
+        {% for x in l1 %}
+        <h2 class="welcome">Here's what we found for {{x.input}} ! </h2>  
+      </div>
+    <br>
+      <div class="row">
+
+        <div class="col-sm-4">
+          <div class="card " style="width: 22rem;height: 500px;">
+          {% load static %}
+            <img class="card-img-top" src="{% static 'disease_pred/card5.jpg' %}" alt="Card image cap" height="300px">
+            
+            <div class="card-body">
+              <div class="card-title">USES:</div>
+              <p class="card-text">
+            
+            
+                {% if x.uses %}
+              {{ x.uses }}
+
+              {% else %}
+              No uses found.
+              {% endif %}
+              <br>
+              
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card " style="width: 22rem; height: 500px;" >
+          {% load static %}
+            <img class="card-img-top" src="{% static 'disease_pred/card3.jpg' %}" alt="Card image cap" height="300px">
+            <div class="card-body">
+              <div class="card-title">SIDE EFFECTS:</div>
+              <p class="card-text">
+                {% if x.side %}
+              {% for a in x.side %}
+              {{ a }}
+              <br>
+              {% endfor %}
+              {% else %}
+              No side effects found.
+              {% endif %}
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card " style="width: 22rem;height: 500px;">
+          {% load static %}
+            <img class="card-img-top" src="{% static 'disease_pred/card4.jpg' %}" alt="Card image cap" height="300px">
+            <div class="card-body">
+              <div class="card-title">ALTERNATIVES:</div>
+              <p class="card-text">
+              {% if x.alt %}
+              {% for a in x.alt %}
+              {{ a }}
+              <br>
+              {% endfor %}
+              
+          
+              {% else %}
+                No alternatives found.
+                {% endif %}
+            </p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+        </div>
+      </div>
+      </section>
+      {% endif %}
+
+ 
   {% endblock body %}
 </section>
