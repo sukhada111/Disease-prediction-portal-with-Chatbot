@@ -102,6 +102,28 @@
   font-weight: 600;
 }
 
+@media only screen and (min-width: 1000px) {
+  .card_result{
+    width: 40rem;
+    margin-left: 20%;
+  }
+  .info_dis{
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card_result{
+    width: 100%;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heading{
+    margin-left: 12%;
+  }
+}
+
 </style>
 
 <style>
@@ -204,15 +226,15 @@
 
   <section class="top-picks">
     <div class="container">
-      <div class="row heading offset-4">
+      <div class="row heading offset-lg-4 offset-md-3 offset-sm-2 ">
         {% for x in l1 %}
         <h2 class="welcome">Here's what we found for {{x.input}} ! </h2>  
       </div>
     <br>
-      <div class="row">
+      <div class="row info_dis">
 
-        <div class="col-sm-4">
-          <div class="card " style="width: 22rem;height: 500px;">
+        <div class="col-12 col-xl-4">
+          <div class="card card_result" style="height: 500px;">
           {% load static %}
             <img class="card-img-top" src="{% static 'disease_pred/card5.jpg' %}" alt="Card image cap" height="300px">
             
@@ -234,8 +256,8 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
-          <div class="card " style="width: 22rem; height: 500px;" >
+        <div class="col-12 col-xl-4">
+          <div class="card card_result" style=" height: 500px;" >
           {% load static %}
             <img class="card-img-top" src="{% static 'disease_pred/card3.jpg' %}" alt="Card image cap" height="300px">
             <div class="card-body">
@@ -254,8 +276,8 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
-          <div class="card " style="width: 22rem;height: 500px;">
+        <div class="col-12 col-xl-4">
+          <div class="card card_result card3" style="height: 500px;">
           {% load static %}
             <img class="card-img-top" src="{% static 'disease_pred/card4.jpg' %}" alt="Card image cap" height="300px">
             <div class="card-body">
