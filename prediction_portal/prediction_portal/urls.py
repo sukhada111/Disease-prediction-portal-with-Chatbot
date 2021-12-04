@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from home import views
+from pred import views as pred_views
 from register import views as v
 from medicine_info import views as view
 
@@ -28,7 +29,7 @@ urlpatterns = [
     path('medicine_info/',view.medicine_info, name='medicine_info'),
     path('register/',v.registration_view,name='register'),
     path('login/',v.login_view,name='login'),
-     path('logout/',v.logout_view,name='logout')
-
+    path('logout/',v.logout_view,name='logout'),
+    path('prediction/',pred_views.pred,name='prediction')
 
 ]
