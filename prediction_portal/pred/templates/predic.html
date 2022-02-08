@@ -231,7 +231,40 @@
       </div>
     </div>
   </div>  
+  {% if l1 %}
 
+  <section class="top-picks">
+    <div class="container">
+      <div class="row heading offset-lg-4 offset-md-3 offset-sm-2 ">
+        {% for x in l1 %}
+        <h2 class="welcome">Here's what we found for the symptoms entered.. </h2>  
+      </div>
+    <br>
+      <div class="row info_dis">
+
+        <div class="col-12 col-xl-6">
+          <div class="card card_result" style="height: 500px;">
+          {% load static %}
+              <div class="card-body">
+              <div class="card-title">Predictions:</div>
+              <p class="card-text">
+            
+<!--             
+              {% if x.uses %}
+              {{ x.uses }}
+
+              {% endif %} -->
+              <br>
+              
+              </p>
+            </div>
+          </div>
+        </div>   
+        {% endfor %}
+        </div>
+      </div>
+      </section>
+      {% endif %}
   
 {% endblock body %}
 </section>
