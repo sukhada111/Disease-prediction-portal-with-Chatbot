@@ -185,6 +185,7 @@ def pred(request):
         symp=request.POST['symptoms']
         symptoms_input=list(symp.split(","))
         print(symptoms_input)
+        temp = []
         final_list=[]
         # for i in range(len(symptoms_input)):
         #     x=symptom_map.get(symptoms_input[i])
@@ -217,6 +218,6 @@ def pred(request):
             prob.append(p)
         print(diseases)
         print(prob)
+        fin = zip(diseases, prob)
 
-
-        return render(request, 'predic.html',{'symp':symptoms_input,'pred':d_name,'diseases':diseases,'prob':prob})
+        return render(request, 'predic.html',{'symp':symptoms_input,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin})
