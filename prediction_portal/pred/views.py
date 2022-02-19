@@ -220,4 +220,15 @@ def pred(request):
         print(prob)
         fin = zip(diseases, prob)
 
-        return render(request, 'predic.html',{'symp':symptoms_input,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin})
+        df=pd.read_csv(os.getcwd()+'../../Dataset/symptom_precaution.csv')
+        res=df[df['Disease']==d_name]
+        print(res['Precaution_1'])
+        prec=[]
+        prec.append(res['Precaution_1'])
+        prec.append(res['Precaution_2'])
+        prec.append(res['Precaution_3'])
+        prec.append(res['Precaution_4'])
+
+        descr=res['Description']
+
+        return render(request, 'predic.html',{'symp':symptoms_input,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':prec,'desc':descr})
