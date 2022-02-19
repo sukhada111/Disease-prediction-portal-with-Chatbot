@@ -239,7 +239,7 @@
     <div class="row info_dis">
 
         <div class="col-12 col-xl-12">
-          <div class="card card_result" style="height: 300px;">
+          <div class="card card_result" style="height: auto;">
           {% load static %}
               <div class="card-body">
                 <div class="card-title">
@@ -257,7 +257,11 @@
               </div>
               <p class="card-text">
 
-                Disease Predicted :<i>{{ pred }}</i>
+                Disease Predicted :<i>{{ pred }} </i>
+                <br>
+                {% for des in desc %}
+                {{ des }}
+                {% endfor %}
                 <h6>Probable diseases:</h6>
 
               {% if diseases %}
@@ -270,7 +274,16 @@
                 </ol>
               {% endif %}
               <br>
-              
+              {% if prec %}
+              <h6>The following precautions can be taken for {{ pred }}:</h6> 
+              <ul>
+                {% for x in prec%}
+                <li>{{ x }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              <br>
+              <b>Note: </b> {{ mess }}
               </p>
             </div>
           </div>

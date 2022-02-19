@@ -1,7 +1,6 @@
 from django.shortcuts import render
 import requests
 import keras
-
 #importing the necessary libraries
 import numpy as np 
 import pandas as pd 
@@ -184,6 +183,7 @@ def pred(request):
         #taking input from user
         symp=request.POST['symptoms']
         symptoms_input=list(symp.split(","))
+        output_symp = list(symp.split(","))
         print(symptoms_input)
         temp = []
         final_list=[]
@@ -221,14 +221,32 @@ def pred(request):
         fin = zip(diseases, prob)
 
         df=pd.read_csv(os.getcwd()+'../../Dataset/symptom_precaution.csv')
+        df2=pd.read_csv(os.getcwd()+'../../Dataset/Symptom-severity.csv')
+
         res=df[df['Disease']==d_name]
-        print(res['Precaution_1'])
         prec=[]
-        prec.append(res['Precaution_1'])
-        prec.append(res['Precaution_2'])
-        prec.append(res['Precaution_3'])
-        prec.append(res['Precaution_4'])
+        prec.append(res['Precaution_1'].values)
+        prec.append(res['Precaution_2'].values)
+        prec.append(res['Precaution_3'].values)
+        prec.append(res['Precaution_4'].values)
+        
+        flat_prec = [item for sublist in prec for item in sublist]
+        flat = [x for x in flat_prec if pd.isnull(x) == False]
 
-        descr=res['Description']
+        print(flat)
 
-        return render(request, 'predic.html',{'symp':symptoms_input,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':prec,'desc':descr})
+        descr=res['Description'].values
+        sev = []
+        for i in final_list:
+            store  = df2[df2['Symptom']==i]['weight']
+            mid = store.tolist()
+            sev.append(mid)
+        print(sev)
+        flat_sev = [item for sublist in sev for item in sublist]
+        val = np.mean(flat_sev)
+        if(val>=4):
+            message = "The symptom severity seems high, Kindly consult a doctor at the earliest."
+        else:
+            message="The symptom severity is mild as of now. Consult a doctor if remains prolonged."
+
+        return render(request, 'predic.html',{'symp': output_symp,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':flat,'desc':descr,'mess':message})
