@@ -161,7 +161,11 @@
 {% block style %}
 
 {% load static %}
-
+<style>
+.card {
+  flex-direction: row;
+}
+</style>
 {% endblock style %}
 
 {% block body %}
@@ -239,41 +243,58 @@
     <div class="row info_dis">
 
         <div class="col-12 col-xl-12">
-          <div class="card card_result" style="height: 300px;">
+          <div class="card card_result" style="height: auto;">
           {% load static %}
               <div class="card-body">
+                  <div class="card-title">
+                    <h4 class="welcome">For the Symptoms:  </h4>                
+                  </div>
+                  <div class="row offset-lg-1 offset-md-3 offset-sm-2">
+                    {% for i in symp %}
+                      <ul>
+                        <li>{{ i }}</li>
+                      </ul>
+                    {% endfor %}
+                  </div>
                 <div class="card-title">
-                  <h4 class="welcome">For the Symptoms:  </h4>                
+                  <h4 class="welcome">Results: </h4>                
                 </div>
-                <div class="row offset-lg-1 offset-md-3 offset-sm-2">
-                  {% for i in symp %}
-                    <ul>
-                      <li>{{ i }}</li>
-                    </ul>
+                <p class="card-text">
+
+                  Disease Predicted :<i>{{ pred }} </i>
+                  <br>
+                  {% for des in desc %}
+                  {{ des }}
                   {% endfor %}
-                </div>
-              <div class="card-title">
-                <h4 class="welcome">Results: </h4>                
-              </div>
-              <p class="card-text">
+                  <h6>Probable diseases:</h6>
 
-                Disease Predicted :<i>{{ pred }}</i>
-                <h6>Probable diseases:</h6>
+                {% if diseases %}
+                <ol>
+                {% for ab in fin %}
+                      
+                    <li>{{ ab.0 }} : {{ ab.1 }}% </li>
+          
+                {% endfor %}
+                  </ol>
+                {% endif %}
+                <br>
+                {% if prec %}
+                <h6>The following precautions can be taken for {{ pred }}:</h6> 
+                <ul>
+                  {% for x in prec%}
+                  <li>{{ x }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+                <br>
+                <b>Note: </b> {{ mess }}
+                </p>
 
-              {% if diseases %}
-              <ol>
-              {% for ab in fin %}
-                     
-                  <li>{{ ab.0 }} : {{ ab.1 }}% </li>
-        
-              {% endfor %}
-                </ol>
-              {% endif %}
-              <br>
-              
-              </p>
             </div>
+            <img src="{%static 'pred/Allergy.png' %}" alt="Results in PieChart" height="500px" width="500px">
+
           </div>
+
         </div>   
         </div>
       </div>
