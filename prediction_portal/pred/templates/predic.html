@@ -155,7 +155,7 @@
     </script>
     {% endblock head %}
 {% block title %}
-    Register
+    Get Prediction
 {% endblock title %}
 
 {% block style %}
@@ -237,104 +237,3 @@
       </div>
     </div>
   </div>  
-  {% if pred %}
-
-  <section class="top-picks" style="margin-top: -30px;">
-    <div class="container">
-      
-    <div class="row info_dis">
-
-        <div class="col-12 col-xl-12">
-          <div class="card card_result" style="height: auto;">
-          {% load static %}
-              <div class="card-body">
-                  <div class="card-title">
-                    <h4 class="welcome">For the Symptoms:  </h4>                
-                  </div>
-                  <div class="row offset-lg-1 offset-md-3 offset-sm-2">
-                    {% for i in symp %}
-                      <ul>
-                        <li>{{ i }}</li>
-                      </ul>
-                    {% endfor %}
-                  </div>
-                <div class="card-title">
-                  <h4 class="welcome">Results: </h4>                
-                </div>
-                <p class="card-text">
-
-                  Disease Predicted :<i>{{ pred }} </i>
-                  <br>
-                  {% for des in desc %}
-                  {{ des }}
-                  {% endfor %}
-                  <h6>Probable diseases:</h6>
-
-                {% if diseases %}
-                <ol>
-                {% for ab in fin %}
-                      
-                    <li>{{ ab.0 }} : {{ ab.1 }}% </li>
-          
-                {% endfor %}
-                  </ol>
-                {% endif %}
-                <br>
-                {% if prec %}
-                <h6>The following precautions can be taken for {{ pred }}:</h6> 
-                <ul>
-                  {% for x in prec%}
-                  <li>{{ x }}</li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-                <br>
-                <b>Note: </b> {{ mess }}
-                </p>
-
-            </div>
-            <div id="container" style="width: 200%;">
-
-              <canvas id="pie-chart"></canvas>
-              <p style="text-align:center;">Disease Predictions</p>
-            </div>
-
-          </div>
-
-        </div>   
-        </div>
-      </div>
-      </section>
-      {% endif %}
-      {% block content %}
-      
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-      <script>
-      
-        var config = {
-          type: 'pie',
-          data: {
-            datasets: [{
-              data: {{ prob|safe }},
-              backgroundColor: ['#35858B', '#4FBDBA', '#AEFEFF'],
-              label: 'Disease Predictions',
-            }],
-            labels: {{ diseases |safe }}
-          },
-          options: {
-            responsive: true,
-           
-        
-          },
-        };
-        
-      
-        window.onload = function() {
-          var ctx = document.getElementById('pie-chart').getContext('2d');
-          window.myPie = new Chart(ctx, config);
-        };
-      
-      </script>
-      {% endblock %}
-{% endblock body %}
-</section>

@@ -257,4 +257,4 @@ def pred(request):
         else:
             message="The symptom severity is mild as of now. Consult a doctor if remains prolonged."
 
-        return render(request, 'predic.html',{'symp': output_symp,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':flat,'desc':descr,'mess':message})
+        return render(request, 'res.html',{'symp': output_symp,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':flat,'desc':descr,'mess':message,'sev':flat_sev})

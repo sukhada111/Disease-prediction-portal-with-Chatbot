@@ -1,0 +1,488 @@
+{% extends "base.html" %}
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script>
+ 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      console.log("hi");
+     $('#symptoms').tokenfield({
+      autocomplete:{
+       source: ['Itching',
+     'Skin Rash',
+     'Nodal Skin Eruptions',
+     'Continuous Sneezing',
+     'Shivering',
+     'Chills',
+     'Joint Pain',
+     'Stomach Pain',
+     'Acidity',
+     'Ulcers On Tongue',
+     'Muscle Wasting',
+     'Vomiting',
+     'Burning Micturition',
+     'Spotting  Urination',
+     'Fatigue',
+     'Weight Gain',
+     'Anxiety',
+     'Cold Hands And Feets',
+     'Mood Swings',
+     'Weight Loss',
+     'Restlessness',
+     'Lethargy',
+     'Patches In Throat',
+     'Irregular Sugar Level',
+     'Cough',
+     'High Fever',
+     'Sunken Eyes',
+     'Breathlessness',
+     'Sweating',
+     'Dehydration',
+     'Indigestion',
+     'Headache',
+     'Yellowish Skin',
+     'Dark Urine',
+     'Nausea',
+     'Loss Of Appetite',
+     'Pain Behind The Eyes',
+     'Back Pain',
+     'Constipation',
+     'Abdominal Pain',
+     'Diarrhoea',
+     'Mild Fever',
+     'Yellow Urine',
+     'Yellowing Of Eyes',
+     'Acute Liver Failure',
+     'Fluid Overload',
+     'Swelling Of Stomach',
+     'Swelled Lymph Nodes',
+     'Malaise',
+     'Blurred And Distorted Vision',
+     'Phlegm',
+     'Throat Irritation',
+     'Redness Of Eyes',
+     'Sinus Pressure',
+     'Runny Nose',
+     'Congestion',
+     'Chest Pain',
+     'Weakness In Limbs',
+     'Fast Heart Rate',
+     'Pain During Bowel Movements',
+     'Pain In Anal Region',
+     'Bloody Stool',
+     'Irritation In Anus',
+     'Neck Pain',
+     'Dizziness',
+     'Cramps',
+     'Bruising',
+     'Obesity',
+     'Swollen Legs',
+     'Swollen Blood Vessels',
+     'Puffy Face And Eyes',
+     'Enlarged Thyroid',
+     'Brittle Nails',
+     'Swollen Extremeties',
+     'Excessive Hunger',
+     'Extra Marital Contacts',
+     'Drying And Tingling Lips',
+     'Slurred Speech',
+     'Knee Pain',
+     'Hip Joint Pain',
+     'Muscle Weakness',
+     'Stiff Neck',
+     'Swelling Joints',
+     'Movement Stiffness',
+     'Spinning Movements',
+     'Loss Of Balance',
+     'Unsteadiness',
+     'Weakness Of One Body Side',
+     'Loss Of Smell',
+     'Bladder Discomfort',
+     'Foul Smell Of Urine',
+     'Continuous Feel Of Urine',
+     'Passage Of Gases',
+     'Internal Itching',
+     'Toxic Look (Typhos)',
+     'Depression',
+     'Irritability',
+     'Muscle Pain',
+     'Altered Sensorium',
+     'Red Spots Over Body',
+     'Belly Pain',
+     'Abnormal Menstruation',
+     'Dischromic  Patches',
+     'Watering From Eyes',
+     'Increased Appetite',
+     'Polyuria',
+     'Family History',
+     'Mucoid Sputum',
+     'Rusty Sputum',
+     'Lack Of Concentration',
+     'Visual Disturbances',
+     'Receiving Blood Transfusion',
+     'Receiving Unsterile Injections',
+     'Coma',
+     'Stomach Bleeding',
+     'Distention Of Abdomen',
+     'History Of Alcohol Consumption',
+     'Fluid Overload',
+     'Blood In Sputum',
+     'Prominent Veins On Calf',
+     'Palpitations',
+     'Painful Walking',
+     'Pus Filled Pimples',
+     'Blackheads',
+     'Scurring',
+     'Skin Peeling',
+     'Silver Like Dusting',
+     'Small Dents In Nails',
+     'Inflammatory Nails',
+     'Blister',
+     'Red Sore Around Nose',
+     'Yellow Crust Ooze',
+     'Prognosis'],
+       delay:1
+      },
+      showAutocompleteOnFocus: true
+     });
+    });
+  
+    </script>
+    {% endblock head %}
+{% block title %}
+    Results
+{% endblock title %}
+
+{% block style %}
+
+{% load static %}
+<style>
+.card {
+  flex-direction: row;
+}
+.symptoms{
+    padding: 5%;
+    font-weight: 400;
+    background-color: #dcf6fc;
+    color: #1572A1;
+    border-color: #1572A1;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    font-size: 1.05rem;
+    margin-top: 4%;
+
+}
+h5{
+    color: #085E7D;
+}
+.disease{
+    padding: 3%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: rgba(179, 227, 163,0.5);
+    color: #38a614;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    transition: transform .2s; /* Animation */
+    text-transform: capitalize;
+
+
+   
+}
+.disease:hover {
+    transform: scale(1.1);
+}
+.bar{
+    padding: 2%;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+}
+.description{
+    padding: 5%;
+    height: fit-content;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    background-color: #FDEBF7;
+    color: #7A0BC0;
+}
+.des_title{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+#icon {
+  padding: 10px;
+
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.prec{
+  text-transform: capitalize;
+  padding: 3%;
+  font-size: 1.2rem;
+  width: 100%;
+  border: 0px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  transition: transform .2s; /* Animation */
+  background-color: #F5EEDC;
+  color: #694E4E;
+  margin-top: 4%;
+}
+.prec:hover {
+    transform: scale(1.05);
+}
+.message{
+  color: #DA1212;
+}
+</style>
+{% endblock style %}
+
+
+
+{% block body %}
+
+
+<style>
+	/* Buttons */
+.btn-header{
+  background-color: #ee5253;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+</style>
+
+
+<section class="vh-100" style="background-color:#f7ebed">
+  {% if pred %}
+
+  <section class="top-picks" >    
+    <div class="container">
+      
+    <div class="row info_dis">
+
+        <div class="col-12 col-xl-12">
+          <div class="card card_result" style="height: auto; margin-top: 8%; background-color: #f7f7f7;">
+          {% load static %}
+          <div class="container">
+              <div class="card-body">
+                  <div class="card-title">
+                    <h1 style="color: #f05959;">Results : </h1>
+                    <br>
+                    <h5 class="welcome">Symptoms:  </h5>                
+                  </div>
+                  <div class="row ">
+                        {% for i in symp %}
+                        <div class="col-md-4">
+                            <div class="card symptoms">
+                                {{ i }}
+                            </div>
+                        </div>
+                            {% endfor %}
+                  </div>
+                  </div>
+                <!-- Pie Chart and Diseases -->
+
+                  <div class="container" style="margin-top: 5%;">
+                        <h5 class="welcome" style="margin-bottom: 2%;">Predictions :</h5>                
+                        <div class="row" style="margin-top: 2%;">
+                            <div class="card">
+                                <div class="col-sm" style="width: 100%;">
+                                        <canvas id="pie-chart" width="350px" height="350px"></canvas>
+                                        <p style="text-align:center;">Top 3 possible Diseases</p>
+                                </div>
+                            </div>
+                        <div class="col-sm">
+                            {% for ab in fin %}
+                            <div class="row">
+                                <div class="card disease d-flex justify-content-center">
+                                    {{ ab.0 }} :  <span style="color: #557C55;"><b>{{ ab.1 }}%</b></span>
+                                </div>
+                            </div>
+                
+                            {% endfor %}
+                            
+                        </div>
+                        
+                </div>
+                  <!-- 2 column Description, Bar Graph   -->
+                  <div class="container" style="margin-top: 4%;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card description">
+                              <div id="icon">
+                                  <img src="{%static 'pred/pin.png' %}" alt="Pin Icon" width="40px" height="40px">
+                              </div>
+                                <div class="card-body">
+                                    <h4 class="card-title des_title">{{ pred }}</h5>
+                                    <p class="card-text">
+
+                                    {% for des in desc %}
+                                    {{ des }}
+                                    {% endfor %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card bar">
+                            <canvas id="chart" width="300px" height="165px"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- End here -->
+                  <!-- Precautions and Note -->
+                  <div class="container" style="margin-top: 5%; margin-bottom: 5%;">
+                    <h5 class="welcome">Precautions :</h5>                
+
+                    <div class="row">
+                      <div class="col-lg-12">
+                        {% if prec %}
+                        <div class="row">
+                        {% for x in prec%}
+                        <div class="col-lg">
+                          <div class="card prec  d-flex justify-content-center">
+                            {{ x }}
+                          </div>
+                        </div>
+                       
+                        {% endfor %}
+                        
+                        {% endif %}
+                      </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                 
+                <span class="message"><b>Note: </b> {{ mess }}</span>
+                </p>
+
+            </div>
+
+              
+            </div>
+
+          </div>
+
+        </div>   
+        </div>
+      </div>
+      </section>
+      {% endif %}
+      {% block content %}
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+      <script>
+      
+        var config = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ prob|safe }},
+              backgroundColor: ['#00A19D', '#E05D5D', '#FFB344'],
+              label: 'Disease Predictions',
+            }],
+            labels: {{ diseases |safe }}
+          },
+          options: {
+            responsive: true,
+           
+        
+          },
+        };
+        
+      
+        window.onload = function() {
+          var ctx = document.getElementById('pie-chart').getContext('2d');
+          window.myPie = new Chart(ctx, config);
+        };
+      
+      </script>
+      <script>
+          let ctx = document.getElementById("chart").getContext("2d");
+
+        let chart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: {{ symp |safe }},
+            datasets: [
+                {
+                label : 'Severity Level out of 5',
+                backgroundColor:"rgba(75, 192, 192, 0.2)",
+                borderColor:"rgba(75, 192, 192, 1)",
+                pointRadius: 3,
+                pointBackgroundColor: "rgba(255, 99, 132, 1)",
+                pointBorderColor: "rgba(75, 192, 192, 1)",
+                // backgroundColor: [
+                // 'rgba(255, 99, 132, 0.2)',
+                // 'rgba(255, 159, 64, 0.2)',
+                // 'rgba(255, 205, 86, 0.2)',
+                // 'rgba(75, 192, 192, 0.2)',
+                // 'rgba(54, 162, 235, 0.2)',
+                // 'rgba(153, 102, 255, 0.2)',
+                // 'rgba(201, 203, 207, 0.2)'
+                // ],
+                // borderColor: [
+                // 'rgb(255, 99, 132)',
+                // 'rgb(255, 159, 64)',
+                // 'rgb(255, 205, 86)',
+                // 'rgb(75, 192, 192)',
+                // 'rgb(54, 162, 235)',
+                // 'rgb(153, 102, 255)',
+                // 'rgb(201, 203, 207)'
+                // ],
+                borderWidth: 2,
+                data: {{ sev |safe }}
+                }
+            ]
+        },
+        options: {
+           
+            responsive: true,
+            title: {
+                text: "Symptom Severity",
+                display: true
+            },
+            scales: {
+              xAxes: [{
+            
+                gridLines: {
+                  display: false,
+                },
+            
+              }],
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true,
+                      max: 5
+                  },
+                  gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                     borderDash: [2],
+                },
+              }]
+            }
+          
+        }
+        });
+      </script>
+      {% endblock %}
+{% endblock body %}
+</section>
