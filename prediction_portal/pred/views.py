@@ -226,37 +226,8 @@ def pred(request):
         print(prob)
         fin = zip(diseases, prob)
 
-        labels = []
-        for i in diseases:
-            labels.append(i)
-        sizes=[]
-        for j in prob:
-            sizes.append(j)
-        explode = (0.1, 0.1, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
-        # fig1, ax1 = plt.subplots()
-        # ax1.pie(sizes, labels=labels, labeldistance=1.05)
-        # sizes = sorted(sizes)
-        plt.rcParams['font.size'] = 11.0
-
-        fig = plt.figure(figsize=[10, 10])
-        ax = fig.add_subplot(111)
-        cmap = plt.cm.prism
-        colors = cmap(np.linspace(0., 1., len(sizes)))
-        pie_wedge_collection = ax.pie(sizes, colors=colors, labels=labels,explode=explode, labeldistance=1.05, autopct='%1.1f%%')
-
-        for pie_wedge in pie_wedge_collection[0]:
-            pie_wedge.set_edgecolor('white')
-        # now = datetime.now()
-        # timestamps = now.strftime("%Y-%m-%d %H:%M:%S")
-
-
-        ax.set_title("Disease Predictions",fontsize=20)
-
+      
         
-        plt.tight_layout()
-        fign = 'pred/static/pred/'+d_name+'.png'
-        plt.savefig(fign,dpi=100)
-
         df=pd.read_csv(os.getcwd()+'../../Dataset/symptom_precaution.csv')
         df2=pd.read_csv(os.getcwd()+'../../Dataset/Symptom-severity.csv')
 
@@ -286,4 +257,4 @@ def pred(request):
         else:
             message="The symptom severity is mild as of now. Consult a doctor if remains prolonged."
 
-        return render(request, 'predic.html',{'symp': output_symp,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':flat,'desc':descr,'mess':message,'figname':fign})
+        return render(request, 'res.html',{'symp': output_symp,'pred':d_name,'diseases':diseases,'prob':prob,'fin':fin, 'prec':flat,'desc':descr,'mess':message,'sev':flat_sev})
