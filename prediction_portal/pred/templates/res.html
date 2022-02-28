@@ -229,7 +229,7 @@ h5{
 .prec{
   text-transform: capitalize;
   padding: 3%;
-  font-size: 1.2rem;
+  font-size: 1 rem;
   width: 100%;
   border: 0px;
   box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
@@ -283,9 +283,11 @@ h5{
                   <div class="card-title">
                     <h1 style="color: #f05959;">Results : </h1>
                     <br>
-                    <h5 class="welcome">Symptoms:  </h5>                
+                    <h5 class="welcome"> For symptoms:  </h5>                
                   </div>
+                 
                   <div class="row ">
+                   
                         {% for i in symp %}
                         <div class="col-md-4">
                             <div class="card symptoms">
@@ -293,6 +295,7 @@ h5{
                             </div>
                         </div>
                             {% endfor %}
+                          
                   </div>
                   </div>
                 <!-- Pie Chart and Diseases -->
@@ -307,16 +310,19 @@ h5{
                                 </div>
                             </div>
                         <div class="col-sm">
+                         
                             {% for ab in fin %}
                             <div class="row">
                                 <div class="card disease d-flex justify-content-center">
-                                    {{ ab.0 }} :  <span style="color: #557C55;"><b>{{ ab.1 }}%</b></span>
+                                    {{ ab.0 }} :  &nbsp;<span style="color: #557C55;"><b>{{ ab.1 }}%</b></span>
                                 </div>
                             </div>
                 
                             {% endfor %}
+                         
                             
                         </div>
+                       
                         
                 </div>
                   <!-- 2 column Description, Bar Graph   -->
