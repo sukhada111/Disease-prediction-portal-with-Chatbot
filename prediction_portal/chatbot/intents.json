@@ -1,0 +1,196 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hii",
+                "Hey",
+                "How are you",
+                "How r u",
+                "How are you doing",
+                "Is anyone there?",
+                "What's up?",
+                "Hello",
+                "Hola",
+                "Good day",
+                "What's popping"
+            ],
+            "responses": [
+                "Hey! Welcome to Healthino.",
+                "Hi there, I'm doing well! My name's Healthino, what can I do for you?",
+                "Hey there, my name's Healthino, your mental health friend. How can I help you today?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later!", "Goodbye!", "Thank you", "Bubye!", "See yaa", "I gotta go"],
+            "responses": [
+                "See you later! Take care!",
+                "Have a lovely day! Take care and stay safe!",
+                "Take care of yourself! I'm always here to support you! Feel free to come back at any time!"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thank's a lot!",
+                "Thank you so much"],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {
+            "tag": "about",
+            "patterns": [
+                "What do you do?",
+                "Who are you?",
+                "What are you here for?",
+                "What can you help me with?",
+                "Is anyone there?",
+                "Are you a real person?",
+                "Tell me about yourself!",
+                "What can you do for me?"
+            ],
+            "responses": [
+                "Well hi! My name's Healthino, your mental health friend! I've been trained to support you through any of the issues and things that you're going through in life right now. I'm all ears and want to support you through your ups and downs. Technically, I'm a computer that's been trained by a human, but I like to think of myself as human!",
+                "Hi, Healthino is developed to help you cope-up with and solve mental health issues. I was designed by a group of students with a motive to be everyone's friend in NEED. You can share all your mental health related problems with me, don't worry, it would be between us and I would suggest you probable solutions.",
+                "Hey! I love that question! My name is Healthino, and I want to be your mental health friend and support you! My fellow human friends have trained me to be a compassionate listener and support buddy when things are going well, and particularly when things aren't going so well.",
+                "Hello There! I am healthino and I would love to be your friend. I promise to be always there for you when things are or are not going well for you. You can share your issues without any hesitation and I will try my level best to help you out."
+            ]
+        },
+        {
+            "tag": "anxiety",
+            "patterns": [
+                "What is anxiety?",
+                "Tell me about anxiety",
+                "Can I have some information about anxiety?",
+                "I'm feeling anxious but I don't know what it is exactly"
+            ],
+            "responses": [
+                "I see that you want to learn more about anxiety, and how to support yourself or your loved ones. At the highest level, anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come.",
+                "The first day of school, going to a job interview, or giving a speech may cause most people to feel fearful and nervous. We all get anxious sometimes, but anxiety becomes a problem when it starts affecting your daily life drastically and one can't cope up with it on a regular basis. It is normal to feel nervous or anxious at some times, but not all the time.",
+                "Anxiety disorders are the most common mental illness in the US and affect 40 Million (18%) of the adults each year. Difficult experiences in childhood or adolescence could trigger a permanent fear in one's mind. This could be solved by taking expert advise and practicing meditation daily."
+                
+            ]
+        },
+   {
+            "tag": "anxiety relief",
+            "patterns": [
+                "I think I have anxiety",
+                "I think I am facing anxiety issues",
+                "Tell me about handling anxiety",
+                "Can I have some information about tackling anxiety?",
+                "I'm feeling anxious and I don't know what to do",
+                "How do I fix my anxiety attacks?"
+            ],
+            "responses": [
+                "I'm sorry to hear that. But don't worry, it will pass soon. In the meantime, I can help you out: try getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes.Whatever you're feeling is valid and completely normal. ",
+                "Feeling anxious is completely normal and it is faced by a lot of people. Can you tell me more about what is going on with you? Sharing your feelings and worries always helps.",
+                "It seems like you are feeling a lot of things at the moment but it will get better soon. Here are a few ways to calm yourself and feel better: listen to a slow song, try to get fresh air or perhaps, visit a loved one or just share your thoughts with me!"           
+            ]
+        },
+  
+        {
+            "tag": "depression",
+            "patterns": [
+                "I think I have depression",
+                "What is depression?",
+                "Tell me about depression",
+                "Can I have some information about depression?",
+                "What is it like to feel depressed?"
+  
+            ],
+            "responses": [
+                "I see that you want to learn more about depression. At the highest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem."
+                
+            ]
+        },
+   {
+            "tag": "depression relief",
+            "patterns": [
+                
+                "How do I support a loved one with depression?",
+                "How do I fix someone's depression?",
+                "How do I fix my depression?"
+      
+          
+            ],
+            "responses": [
+                "The important thing is to reach out and know that everybody matters. A hug or a gentle touch of the hand or even a reassuring nod can get the message across.",
+  
+                "Reaching out is an important first step. If someone isn't ready to talk, continue to offer your support by spending time with them and try to check in regularly, either in person, on the phone, or by text. When you reach out to a friend, letting them know that you are going to be there every step of the way can be very reassuring.",
+  
+                "If someone has not yet seen a doctor, encourage them to seek help and reassure them that there is nothing wrong with asking for assistance. Depression is a real—and treatable—illness."
+            ]
+        },
+  
+        {
+            "tag": "stress",
+            "patterns": [
+                "I'm feeling stressed",
+                "What is stress?",
+                "Is it okay to feel stressed regularly?",
+                "How does stress affect my body?",
+                "Does stress have any positive impact?",
+                "What impacts does stress have?",
+                "What are the symptoms of stress?"
+   
+                   ],
+            "responses": [
+                "Stress is a feeling of emotional or physical tension. It can come from any event or thought that makes you feel frustrated, angry, or nervous. Stress is your body's reaction to a challenge or demand. In short bursts, stress can be positive, such as when it helps you avoid danger or meet a deadline. The body's autonomic nervous system controls your heart rate, breathing, vision changes and more. Its built-in stress response, the fight-or-flight response, helps the body face stressful situations. Long-term (chronic) stress, continued activation of the stress response causes wear and tear on the body. Physical, emotional and behavioral symptoms develop."
+            ]
+        },
+  {
+            "tag": "stress relief",
+            "patterns": [
+                "Tell me how I can relieve stress",
+                "How do I support a loved one feeling stressed?",
+                "How do you prevent a situation from getting too stressful to manage?"
+                   ],
+            "responses": [
+                
+                "Stress works a lot like homework. You don't do it every day, and eventually, it's going to pile up into a huge mess. So the best solution is to deal with your problems, one at a time. Don't let it overwhelm you. Normally, it is not advised that you take medication for stress. This is because by taking medication, you will continue to ignore the issues at hand. Moreover, there is a possibility that you will develop a tolerance for the medication and might require a higher dosage, which eventually can lead to a lot of side effects.Therapy always helps."
+            ]
+        },
+  
+        {
+            "tag": "sad",
+            "patterns": [
+                "I'm feeling a bit sad",
+                "I have been feeling down lately",
+                "How do I tackle sadness?",
+                "How can I overcome my sad feelings?",
+                "Things that help to overcome sad moods"        
+   ],
+            "responses": [
+                "That's alright. I am here to help you out and I'm sure you will feel better soon. Would you like to share what's bothering you? ", 
+                "That's okay and normal with all humans. If you feel comfortable, you are welcome to share your problems. Some activities that might help you include writing in a journal, listening to music, spending time with friends or family, andor drawing to express your emotions",
+                "Hey, don't worry, it's okay to feel that way sometimes. I'm right here as your listening companion, go on and tell me what's wrong",
+                "It's okay, don't be so hard on yourself. Do things that make you happy, be it getting back to a forgotten hobby, just listening to a soothing song or something as easy as treating yourself with your favorite food!"
+            ]
+        },
+   
+  
+  {
+            "tag": "happy",
+            "patterns": [
+                "I'm feeling particularly happy today",
+                "I am feeling elated!",
+                "I am feeling great",
+                "I'm so happy, I can't wait to tell you all the amazing things that happened to me",
+                "I was very cheerful throughout the day",
+                "I am delighted over my success"
+            
+   ],
+            "responses": [
+                "Wow, I'm glad to hear that! Good things are surely coming your way! ", 
+                "That's great, I'm glad you are feeling this way. Let me know if you need someone to share it with!",
+                "Hey, that's amazing. I hope it just gets better everyday.",
+                "Woohoo! Time to partyy"
+            ]
+        }
+    ]
+  }
+  
