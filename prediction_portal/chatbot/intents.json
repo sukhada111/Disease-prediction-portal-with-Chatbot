@@ -6,10 +6,12 @@
                 "Hi",
                 "Hii",
                 "Hey",
+                "Heyy",
                 "How are you",
                 "How r u",
                 "How are you doing",
                 "Is anyone there?",
+                "You there?",
                 "What's up?",
                 "Hello",
                 "Hola",
@@ -18,7 +20,7 @@
             ],
             "responses": [
                 "Hey! Welcome to Healthino.",
-                "Hi there, I'm doing well! My name's Healthino, what can I do for you?",
+                "Hi there, My name's Healthino, what can I do for you?",
                 "Hey there, my name's Healthino, your mental health friend. How can I help you today?"
             ]
         },
@@ -37,7 +39,7 @@
                 "Thanks",
                 "Thank you",
                 "That's helpful",
-                "Thank's a lot!",
+                "Thanks a lot!",
                 "Thank you so much"],
             "responses": ["Happy to help!", "Any time!", "My pleasure"]
         },
@@ -51,7 +53,8 @@
                 "Is anyone there?",
                 "Are you a real person?",
                 "Tell me about yourself!",
-                "What can you do for me?"
+                "What can you do for me?",
+                "What are you?"
             ],
             "responses": [
                 "Well hi! My name's Healthino, your mental health friend! I've been trained to support you through any of the issues and things that you're going through in life right now. I'm all ears and want to support you through your ups and downs. Technically, I'm a computer that's been trained by a human, but I like to think of myself as human!",
@@ -66,24 +69,30 @@
                 "What is anxiety?",
                 "Tell me about anxiety",
                 "Can I have some information about anxiety?",
-                "I'm feeling anxious but I don't know what it is exactly"
+                "I'm feeling anxious but I don't know what it is exactly",
+                "I am feeling anxious",
+                "How do I know if I have anxiety",
+                "I think I have anxiety"
             ],
             "responses": [
                 "I see that you want to learn more about anxiety, and how to support yourself or your loved ones. At the highest level, anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come.",
                 "The first day of school, going to a job interview, or giving a speech may cause most people to feel fearful and nervous. We all get anxious sometimes, but anxiety becomes a problem when it starts affecting your daily life drastically and one can't cope up with it on a regular basis. It is normal to feel nervous or anxious at some times, but not all the time.",
-                "Anxiety disorders are the most common mental illness in the US and affect 40 Million (18%) of the adults each year. Difficult experiences in childhood or adolescence could trigger a permanent fear in one's mind. This could be solved by taking expert advise and practicing meditation daily."
+                "Anxiety disorders are the most common mental illness. Difficult experiences in childhood or adolescence could trigger a permanent fear in one's mind. This could be solved by taking expert advice and practicing meditation daily."
                 
             ]
         },
    {
             "tag": "anxiety relief",
             "patterns": [
-                "I think I have anxiety",
                 "I think I am facing anxiety issues",
                 "Tell me about handling anxiety",
                 "Can I have some information about tackling anxiety?",
-                "I'm feeling anxious and I don't know what to do",
-                "How do I fix my anxiety attacks?"
+                "I'm feeling anxious and I don't know how to fix it",
+                "How do I fix my anxiety attacks?",
+                "How do I get rid of anxiety",
+                "I want relief from feeling anxious",
+                "How to tackle anxiety",
+                "Remedies for anxiety"
             ],
             "responses": [
                 "I'm sorry to hear that. But don't worry, it will pass soon. In the meantime, I can help you out: try getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes.Whatever you're feeling is valid and completely normal. ",
@@ -99,11 +108,17 @@
                 "What is depression?",
                 "Tell me about depression",
                 "Can I have some information about depression?",
-                "What is it like to feel depressed?"
-  
+                "What is it like to feel depressed?",
+                "Is depression a mental illness?",
+                "What does it mean to be depressed",
+                "Is depression the same as anxiety",
+                "What impacts can depression have on me",
+                "How does depression affect the body"  
             ],
             "responses": [
-                "I see that you want to learn more about depression. At the highest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem."
+                "I see that you want to learn more about depression. At the highest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem.",
+                "Depression (major depressive disorder) is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. More than just a bout of the blues, depression isn't a weakness and you can't simply snap out of it. Depression may require long-term treatment and it is a deeper issue as compared to anxiety. But don't get discouraged. Most people with depression feel better with medication, psychotherapy or both.",
+                "Depression is a disorder than have various impacts on the body both mentally and physically, it includes change in appetite, too much or too less sleeping, feeling worthless, increase in purposeless physical activity, difficulty in concentrating, thoughts of suicide, angry outburts, irritation, frustration and physical issues like backpain and headache."
                 
             ]
         },
@@ -130,6 +145,7 @@
             "tag": "stress",
             "patterns": [
                 "I'm feeling stressed",
+                "I am feeling stressful",
                 "What is stress?",
                 "Is it okay to feel stressed regularly?",
                 "How does stress affect my body?",
@@ -159,6 +175,7 @@
             "tag": "sad",
             "patterns": [
                 "I'm feeling a bit sad",
+                "I am feeling sad",
                 "I have been feeling down lately",
                 "How do I tackle sadness?",
                 "How can I overcome my sad feelings?",
@@ -168,7 +185,7 @@
                 "That's alright. I am here to help you out and I'm sure you will feel better soon. Would you like to share what's bothering you? ", 
                 "That's okay and normal with all humans. If you feel comfortable, you are welcome to share your problems. Some activities that might help you include writing in a journal, listening to music, spending time with friends or family, andor drawing to express your emotions",
                 "Hey, don't worry, it's okay to feel that way sometimes. I'm right here as your listening companion, go on and tell me what's wrong",
-                "It's okay, don't be so hard on yourself. Do things that make you happy, be it getting back to a forgotten hobby, just listening to a soothing song or something as easy as treating yourself with your favorite food!"
+                "It's okay, don't be so hard on yourself. Do things that make you happy, be it getting back to a forgotten hobby, just listening to a soothing song or something as easy as treating yourself with your favourite food!"
             ]
         },
    
@@ -188,9 +205,150 @@
                 "Wow, I'm glad to hear that! Good things are surely coming your way! ", 
                 "That's great, I'm glad you are feeling this way. Let me know if you need someone to share it with!",
                 "Hey, that's amazing. I hope it just gets better everyday.",
-                "Woohoo! Time to partyy"
+                "It’s so good to know. Wishing only the best for you."
             ]
+        },
+
+{
+            "tag": "relationship",
+            "patterns": [
+                "My partner harasses me and I want to end my relationship",
+                "My partner does not satisfy my needs and I am considering to part ways with him",
+                "My girlfriend doesn't trust me and it is affecting our relationship",
+                "I am abused by my partner constantly and it hurts me.",
+                "I broke up with my girlfriend",
+                "I broke up with my boyfriend",
+                "I divorced my partner",
+                "I am going through hard times after my breakup",
+                "My divorce makes me sad all time.",
+                "I had a fight with my partner and we do not talk.",
+                "My toxic relationship is not working well for me",
+                "I am enjoying a very happy relationship with my partner",
+                "My wife loves me and we share a great bond together",
+                "I have separated with my partner and I do not feel cheerful.",
+                "I had a fight with my girlfriend and I miss her",
+                "After an ugly breakup, my life has become a mess",
+                "My partner supports me in my relationship and always makes sure that I am happy.",
+                "My partner always thinks of me as an useless person and treats me incorrectly.",
+                "I am loving my married life with my partner. We both support each other and are having a great time in our lives. I hope it stays the same throughout our life"
+   ]
+        },
+
+{
+            "tag": "workplace",
+            "patterns": [
+                "I didn’t have a great day at work today!",
+                "My colleagues do not treat me well and it affects my mental health",
+                "I am not satisfied with my job and continuing at the same place is disturbing for me",
+                "I received a promotion for my excellent work",
+                "I was awarded the best employee award",
+                "My colleagues help me with my work and I have the best manager",
+                "My boss at my work has been harassing me for some time now",
+                "I don’t want to work anymore",
+                "It’s getting too much toxic and stressful to work each day",
+                "My colleagues and boss have cornered me and aren’t considering my opinions at all! It’s been too much stressful just to obey their decisions and act as a donkey",
+                "My work doesn’t excite me anymore", 
+                "My boss is a tyrant and cruel. It’s getting harder day by day to work", 
+                "I don’t feel independent and trusted in my job",
+                "My job is a blunder",
+                "I loved my first day at my new workplace and hope it stays the same throughout my life.",
+                "My boss and colleagues are so cooperative and helpful"            
+   ]
+        },
+
+ {
+            "tag": "eating disorders",
+            "patterns": [
+                "What is an eating disorder",
+                "How do I know if I have an eating disorder",
+                "Is it normal to overeat",
+                "Does my mental state affect my eating habits",
+                "I don’t feel like eating much these days. Is that normal",
+                "My diet has degraded a lot lately",
+                "My diet is very bad lately",
+                "I eat a lot of junk food in recent times",
+                "I eat a lot of unhealthy food lately",
+                "Anxiety has affected my eating. Is it common?",
+                "Can eating habits be affected by anxiety"
+
+            
+   ],
+            "responses": [
+                "An eating disorder is a mental disorder defined by abnormal eating behaviours that negatively affect a person's physical or mental health. These can include both overeating and undereating. At times, one can experience out of control eating even after they are full or they can have phases of binge eating and at times people tend to avoid food. Eating disorders are often an outcome of bad mental state and could be fixed by consulting a Nutrition counsellor, undergoing psychotherapy or taking medicines like antidepressants though it is not the best approach.", 
+                "Eating disorders are medical conditions; they are not a lifestyle choice. They affect your body's ability to get proper nutrition. There are 3 types of eating disorders namely Binge eating, Bulimia nervosa which includes phases of binge eating and throwing up later on and the third type could be Anorexia nervosa which includes avoiding food. You can fix your eating disorders by improving your relationships, moods and monitoring your diet and food habits. Explore healthy ways to cope with stressful situations. "
+                          ]
+        },
+  {
+            "tag": "childhood fears",
+            "patterns": [
+                "What can be called as a childhood fear",
+                "Do childhood fears affect the mental state",
+                "My childhood fears still haunt me.",
+                "How do I cope with my childhood fears",
+                "Is having a fear or phobia a serious sign of mental illness",
+                "I get afraid quite often. What could be the reason",
+                "Are phobias a mental health issue",
+                "Can childhood trauma be the reason for anxiety",
+                "How does childhood trauma affect one's mental health"
+
+            
+   ],
+            "responses": [
+                "Childhood fears are almost experienced by every human since we as children explore our surroundings and often come across a challenge. There are various fears that are developed during childhood like fear of the dark, fear of barking of dogs, fear of heights and many more. Most are mild, but even when they intensify, they generally subside on their own after a while. Fortunately, most phobias are quite treatable. In general, they are not a sign of serious mental illness requiring many months or years of therapy. However if it persists and intensifies, help from a psychiatrist is recommended. A childhood maltreatment should not be confused with a mild fear.", 
+                "Early life adversity is a major risk factor for the development of psychological and behavioural problems later in life. Higher rates of depression, suicidality, anxiety disorders, post-traumatic stress disorder, and aggressive behaviour have been reported in adults who experienced childhood maltreatment. It is very important in such cases to open up about the fears and get help either from a therapist or from a loved one to receive the assurance that you have support in case of a breakdown or a tough phase.",
+	            "Childhood fears can be traumatic and can have long-term psychological effects on your brain. Talking about your issues with a therapist or a psychologist will help you overcome your fears. Childhood issues tend to increase if you get into this pattern. Exposing yourself to your fears can be an effective way of overcoming this anxiety."
+                          ]
+        },
+
+ {
+            "tag": "friends",
+            "patterns": [
+                "I feel so grateful to have such great friends!",
+                "I am glad to say I have a good friend circle around myself",
+                "My friends are the best people I have ever known!",
+	            "I have a really close and tight group of friends!",
+                "Only a few lucky people get to have a good, loyal friend by their side, thankfully I am one of them!",
+                "I had a great friend but things worsened one day and now I feel like our friendship is broken.",
+                "I wish my friend hadn’t given up on me after that fight.",
+                "We still talk to each other but things don’t feel the same way as before and I feel our friendship is ruined.",
+                "I had a really close friend who stayed with me through it all, but one day we had a misunderstanding and ended up arguing and we never talked to each other properly since then.",
+                "I wish I hadn’t lost my best friend because that friendship meant a lot to me. ",
+                "My friend was the best thing that ever happened to me and I wish we hadn’t fought and tried to talk it out before worsening things even more and ending up destroying our friendship.",
+                "One of my close friends suddenly stopped talking to me and I never got the chance to know what went wrong that affected our friendship so badly.",
+                "We had some really great memories together and I miss my best friend so much and I don’t know when we will get to meet again."
+
+            
+   ]
+        },
+
+ {
+            "tag": "family",
+            "patterns": [
+                "My family is always available to listen to my problems and they are the best!",
+                "My family appreciates me for all my achievements.",
+                "My family is extremely supportive and always motivates me.",
+	            "I love spending time with my family. Always cheers me up.",
+                "Everyday quarrels in my family cause great harm to my mental peace",
+                "Things aren’t going well in my family.",
+                "There are internal disputes in my family which ruin my mental health",
+                "Family issues have really made it difficult for me to stay happy.",
+                "My mother and my father don’t get along well lately and constant fights have affected our household peace.",
+                "My mom and I are not getting along over some issue which has now started affecting me.",
+                "My sister and I never get well together and today she crossed all the limits by insulting me in front of all our friends. How do I bring an end to all this ?",
+                "My family treats me in a derogatory manner. They always insult me and look down upon me and this always infuriates me.",
+                "I am thinking of leaving my family.",
+                "My brother and I don’t share a healthy bond."
+
+
+
+            
+   ]
+         
         }
+
+
+
     ]
   }
   
+

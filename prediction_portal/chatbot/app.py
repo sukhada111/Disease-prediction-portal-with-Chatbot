@@ -64,8 +64,8 @@ class ChatApplication:
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg1)
         self.text_widget.configure(state=DISABLED)
-
-        msg2 = f"{bot_name}: {get_response(msg)}\n\n"
+        reply= get_response(msg)
+        msg2 = f"{bot_name}: {reply} \n\n"
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg2)
         self.text_widget.configure(state=DISABLED)
