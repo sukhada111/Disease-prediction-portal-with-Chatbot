@@ -77,7 +77,7 @@ def cleaned(token):
         return 'today'
     if token == '4got' or token == '4gotten':
         return 'forget'
-    if token in ['hahah', 'hahaha', 'hahahaha', 'hehehe', 'hahahah','hahahahaha']:
+    if token in ['hahah', 'hahaha', 'hahahaha', 'hehehe', 'hahahah']:
         return 'haha'
     if token == "mother's":
         return "mother"
@@ -87,7 +87,8 @@ def cleaned(token):
         return "dad"
     if token == 'bday' or token == 'b-day':
         return 'birthday'
-    if token in ["i'm", "don't", "can't", "couldn't", "aren't", "wouldn't", "isn't", "didn't", "hadn't","doesn't", "won't", "haven't", "wasn't", "hasn't", "shouldn't", "ain't","weren't", "should've", "would've","could've" ,"here's","where's"]:
+    if token in ["i'm", "don't", "can't", "couldn't", "aren't", "wouldn't", "isn't", "didn't", "hadn't",
+                 "doesn't", "won't", "haven't", "wasn't", "hasn't", "shouldn't", "ain't","weren't", "should've", "would've","could've" ,"here's","where's"]:
         return token.replace("'", "")
     if token in ['lmao', 'lolz', 'rofl']:
         return 'lol'
@@ -98,8 +99,10 @@ def cleaned(token):
     if token == 'goood':
         return 'good'
     if token in ['amp', 'quot', 'lt', 'gt', '½25', '..', '. .', '. . .']:
-        return ''     
-    if token == 'awsome' or token=='awsm':
+        return ''
+    if token in ['awh', 'aw', 'awww']:
+        return 'aww'      
+    if token=='awsome' or token=='awsm':
         return 'awesome'
     if token in ["g'night","gn","gooodnight"]:
         return 'goodnight'
@@ -109,6 +112,15 @@ def cleaned(token):
         return 'probably'
     if token in ['omfg','omgg']:
         return 'omg'
+    if token == 'woho':
+        return 'woohoo'
+    if token == '#folowfriday' or token == 'tweps':
+        return ''
+    #added later
+    if token in ['divorced','divorce', 'parted', 'separated', 'leaving', 'leave']:
+        return 'left'
+    if token in ['derogatory','depreciative','demeaning']:
+        return 'harsh'
 
     return token
 
@@ -266,7 +278,14 @@ def remove_noise(tweet_tokens):
         if cleaned_token == "couldve":
             cleaned_tokens.append('could')
             cleaned_tokens.append('have')
+            continue        
+        #negation
+        if cleaned_token=='dislike':
+            cleaned_tokens.append('do')
+            cleaned_tokens.append('not')
+            cleaned_tokens.append('like')
             continue
+        
        
         if cleaned_token.strip() and cleaned_token not in string.punctuation:
             cleaned_tokens.append(cleaned_token)
@@ -296,6 +315,7 @@ built_model=tensorflow.keras.models.load_model(model_path)
 
 def sentence_to_indices(sentence_words, max_len):
     X = np.zeros((max_len))
+    print(X.shape)
     sentence_indices = []
     for j, w in enumerate(sentence_words):
         try:
@@ -317,4 +337,11 @@ def predict_custom_tweet_sentiment(custom_tweet):
     return round(built_model.predict(np.array([x_input])).item(),3)
 
 print(predict_custom_tweet_sentiment("I'm glad you're here!"))
+
+def predict_custom_tag(custom_text,max_word_len):
+    # Convert the tweet such that it can be fed to the model
+    x_ip = sentence_to_indices(remove_noise(custom_text), max_word_len) #max_len=162 for our model final
+    
+    # Retrun the model's prediction
+    return x_ip
 
