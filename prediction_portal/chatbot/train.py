@@ -46,6 +46,8 @@ tags = sorted(set(tags))
 print(len(xy), "patterns")
 print(len(tags), "tags:", tags)
 print(len(all_words), "unique stemmed words:", all_words)
+# from prediction_portal.chatbot.sentiment_model import predict_custom_tag
+# from gensim.models import Word2Vec
 
 # create training data
 X_train = []
@@ -53,6 +55,9 @@ y_train = []
 for (pattern_sentence, tag) in xy:
     # X: bag of words for each pattern_sentence
     bag = bag_of_words(pattern_sentence, all_words)
+    # x_ip=predict_custom_tag(pattern_sentence,len(all_words))
+    
+    # X_train.append(x_ip)
     X_train.append(bag)
     # y: PyTorch CrossEntropyLoss needs only class labels, not one-hot
     label = tags.index(tag)
@@ -60,11 +65,16 @@ for (pattern_sentence, tag) in xy:
 
 X_train = np.array(X_train)
 y_train = np.array(y_train)
+# X_train=X_train.astype(np.float32)
+print(X_train.shape)
+print(X_train[0])
+
 
 # Hyper-parameters 
 num_epochs = 1000
 batch_size = 8
 learning_rate = 0.001
+# input_size = len(X_train[0])
 input_size = len(X_train[0])
 hidden_size = 8
 output_size = len(tags)
@@ -99,8 +109,10 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
+
 # Train the model
 for epoch in range(num_epochs):
+    
     for (words, labels) in train_loader:
         words = words.to(device)
         labels = labels.to(dtype=torch.long).to(device)
@@ -110,17 +122,21 @@ for epoch in range(num_epochs):
         # if y would be one-hot, we must apply
         # labels = torch.max(labels, 1)[1]
         loss = criterion(outputs, labels)
+
+        
         
         # Backward and optimize
         optimizer.zero_grad()
         loss.backward()
+
+       
         optimizer.step()
         
     if (epoch+1) % 100 == 0:
         print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
+    
 
 
-print(f'final loss: {loss.item():.4f}')
 
 data = {
 "model_state": model.state_dict(),

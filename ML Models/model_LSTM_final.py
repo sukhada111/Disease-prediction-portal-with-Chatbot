@@ -175,6 +175,11 @@ def cleaned(token):
         return 'woohoo'
     if token == '#folowfriday' or token == 'tweps':
         return ''
+    #added later
+    # if token in ['divorced','divorce', 'parted', 'separated']:
+    #     return 'left'
+    # if token in ['derogatory','depreciative','demeaning']:
+    #     return 'harsh'
               
     return token
 
@@ -332,7 +337,13 @@ def remove_noise(tweet_tokens):
         if cleaned_token == "couldve":
             cleaned_tokens.append('could')
             cleaned_tokens.append('have')
-            continue
+            continue     
+        #negation
+        if cleaned_token=='dislike':
+            cleaned_tokens.append('do')
+            cleaned_tokens.append('not')
+            cleaned_tokens.append('like')
+            continue   
        
         if cleaned_token.strip() and cleaned_token not in string.punctuation: 
             cleaned_tokens.append(cleaned_token)
@@ -453,7 +464,7 @@ print(len(X_test))
 
 model_clean_data.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs = 10, batch_size = 512, shuffle=True)
 
-model_clean_data.save("BiLSTM_tune_1_rerun.h5")
+model_clean_data.save("BiLSTM_tune_1_rerun_modified.h5")
 
 history = model_clean_data.history
 

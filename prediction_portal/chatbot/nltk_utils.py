@@ -1,8 +1,8 @@
 import numpy as np
 import nltk
 # nltk.download('punkt')
-from nltk.stem.porter import PorterStemmer
-stemmer = PorterStemmer()
+from nltk.stem.snowball import SnowballStemmer
+stemmer = SnowballStemmer(language='english')
 
 def tokenize(sentence):
     """

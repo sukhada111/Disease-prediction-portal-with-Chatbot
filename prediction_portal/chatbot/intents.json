@@ -128,24 +128,25 @@
                 
                 "How do I support a loved one with depression?",
                 "How do I fix someone's depression?",
-                "How do I fix my depression?"
+                "How do I fix my depression?",
+                "How do I relieve depression ?"
       
           
             ],
             "responses": [
-                "The important thing is to reach out and know that everybody matters. A hug or a gentle touch of the hand or even a reassuring nod can get the message across.",
+                "I understand depression is tough to go through but the important thing is to reach out and know that everybody matters. A hug or a gentle touch of the hand or even a reassuring nod can get the message across.",
   
-                "Reaching out is an important first step. If someone isn't ready to talk, continue to offer your support by spending time with them and try to check in regularly, either in person, on the phone, or by text. When you reach out to a friend, letting them know that you are going to be there every step of the way can be very reassuring.",
+                "I know it is difficult to do so but reaching out is an important first step. If someone isn't ready to talk, continue to offer your support by spending time with them and try to check in regularly, either in person, on the phone, or by text. When you reach out to a friend, letting them know that you are going to be there every step of the way can be very reassuring.",
   
-                "If someone has not yet seen a doctor, encourage them to seek help and reassure them that there is nothing wrong with asking for assistance. Depression is a real—and treatable—illness."
+                "It can be very common to isolate during depression but trust me if someone has not yet seen a doctor, encourage them to seek help and reassure them that there is nothing wrong with asking for assistance. Depression is a real—and treatable—illness."
+
             ]
         },
   
         {
             "tag": "stress",
             "patterns": [
-                "I'm feeling stressed",
-                "I am feeling stressful",
+                "I want to know about stress",
                 "What is stress?",
                 "Is it okay to feel stressed regularly?",
                 "How does stress affect my body?",
@@ -155,19 +156,21 @@
    
                    ],
             "responses": [
-                "Stress is a feeling of emotional or physical tension. It can come from any event or thought that makes you feel frustrated, angry, or nervous. Stress is your body's reaction to a challenge or demand. In short bursts, stress can be positive, such as when it helps you avoid danger or meet a deadline. The body's autonomic nervous system controls your heart rate, breathing, vision changes and more. Its built-in stress response, the fight-or-flight response, helps the body face stressful situations. Long-term (chronic) stress, continued activation of the stress response causes wear and tear on the body. Physical, emotional and behavioral symptoms develop."
+                "I see that you want to know more about stress. Stress is a feeling of emotional or physical tension. It can come from any event or thought that makes you feel frustrated, angry, or nervous. Stress is your body's reaction to a challenge or demand. In short bursts, stress can be positive, such as when it helps you avoid danger or meet a deadline. The body's autonomic nervous system controls your heart rate, breathing, vision changes and more. Its built-in stress response, the fight-or-flight response, helps the body face stressful situations. Long-term (chronic) stress, continued activation of the stress response causes wear and tear on the body. Physical, emotional and behavioral symptoms develop."
             ]
         },
   {
             "tag": "stress relief",
             "patterns": [
+                "I'm feeling stressed",
+                "I am feeling stressful",
                 "Tell me how I can relieve stress",
                 "How do I support a loved one feeling stressed?",
                 "How do you prevent a situation from getting too stressful to manage?"
                    ],
             "responses": [
                 
-                "Stress works a lot like homework. You don't do it every day, and eventually, it's going to pile up into a huge mess. So the best solution is to deal with your problems, one at a time. Don't let it overwhelm you. Normally, it is not advised that you take medication for stress. This is because by taking medication, you will continue to ignore the issues at hand. Moreover, there is a possibility that you will develop a tolerance for the medication and might require a higher dosage, which eventually can lead to a lot of side effects.Therapy always helps."
+                "To be honest, stress works a lot like homework. You don't do it every day, and eventually, it's going to pile up into a huge mess. So the best solution is to deal with your problems, one at a time. Don't let it overwhelm you. Normally, it is not advised that you take medication for stress. This is because by taking medication, you will continue to ignore the issues at hand. Moreover, there is a possibility that you will develop a tolerance for the medication and might require a higher dosage, which eventually can lead to a lot of side effects.Therapy always helps."
             ]
         },
   
@@ -205,7 +208,7 @@
                 "Wow, I'm glad to hear that! Good things are surely coming your way! ", 
                 "That's great, I'm glad you are feeling this way. Let me know if you need someone to share it with!",
                 "Hey, that's amazing. I hope it just gets better everyday.",
-                "It’s so good to know. Wishing only the best for you."
+                "It's so good to know. Wishing only the best for you."
             ]
         },
 
@@ -230,29 +233,35 @@
                 "After an ugly breakup, my life has become a mess",
                 "My partner supports me in my relationship and always makes sure that I am happy.",
                 "My partner always thinks of me as an useless person and treats me incorrectly.",
-                "I am loving my married life with my partner. We both support each other and are having a great time in our lives. I hope it stays the same throughout our life"
+                "I am loving my married life with my partner. We both support each other and are having a great time in our lives. I hope it stays the same throughout our life",
+                "I and my partner got separated",
+                "I and my partner parted ways recently",
+                "My partner does not feel the same way about me."
+
    ]
         },
 
 {
             "tag": "workplace",
             "patterns": [
-                "I didn’t have a great day at work today!",
+                "I didn't have a great day at work today!",
                 "My colleagues do not treat me well and it affects my mental health",
                 "I am not satisfied with my job and continuing at the same place is disturbing for me",
                 "I received a promotion for my excellent work",
                 "I was awarded the best employee award",
                 "My colleagues help me with my work and I have the best manager",
                 "My boss at my work has been harassing me for some time now",
-                "I don’t want to work anymore",
-                "It’s getting too much toxic and stressful to work each day",
-                "My colleagues and boss have cornered me and aren’t considering my opinions at all! It’s been too much stressful just to obey their decisions and act as a donkey",
-                "My work doesn’t excite me anymore", 
-                "My boss is a tyrant and cruel. It’s getting harder day by day to work", 
-                "I don’t feel independent and trusted in my job",
+                "I don't want to work anymore",
+                "It's getting too much toxic and stressful to work each day",
+                "My colleagues and boss have cornered me and aren't considering my opinions at all! It's been too much stressful just to obey their decisions and act as a donkey",
+                "My work doesn't excite me anymore", 
+                "My boss is a tyrant and cruel. It's getting harder day by day to work", 
+                "I don't feel independent and trusted in my job",
                 "My job is a blunder",
                 "I loved my first day at my new workplace and hope it stays the same throughout my life.",
-                "My boss and colleagues are so cooperative and helpful"            
+                "My boss and colleagues are so cooperative and helpful",
+                "I am facing issues at work.",
+                "I want to leave my job"            
    ]
         },
 
@@ -263,7 +272,7 @@
                 "How do I know if I have an eating disorder",
                 "Is it normal to overeat",
                 "Does my mental state affect my eating habits",
-                "I don’t feel like eating much these days. Is that normal",
+                "I don't feel like eating much these days. Is that normal",
                 "My diet has degraded a lot lately",
                 "My diet is very bad lately",
                 "I eat a lot of junk food in recent times",
@@ -309,14 +318,15 @@
 	            "I have a really close and tight group of friends!",
                 "Only a few lucky people get to have a good, loyal friend by their side, thankfully I am one of them!",
                 "I had a great friend but things worsened one day and now I feel like our friendship is broken.",
-                "I wish my friend hadn’t given up on me after that fight.",
-                "We still talk to each other but things don’t feel the same way as before and I feel our friendship is ruined.",
+                "I wish my friend hadn't given up on me after that fight.",
+                "We still talk to each other but things don't feel the same way as before and I feel our friendship is ruined.",
                 "I had a really close friend who stayed with me through it all, but one day we had a misunderstanding and ended up arguing and we never talked to each other properly since then.",
-                "I wish I hadn’t lost my best friend because that friendship meant a lot to me. ",
-                "My friend was the best thing that ever happened to me and I wish we hadn’t fought and tried to talk it out before worsening things even more and ending up destroying our friendship.",
+                "I wish I hadn't lost my best friend because that friendship meant a lot to me. ",
+                "My friend was the best thing that ever happened to me and I wish we hadn't fought and tried to talk it out before worsening things even more and ending up destroying our friendship.",
                 "One of my close friends suddenly stopped talking to me and I never got the chance to know what went wrong that affected our friendship so badly.",
-                "We had some really great memories together and I miss my best friend so much and I don’t know when we will get to meet again."
-
+                "We had some really great memories together and I miss my best friend so much and I don't know when we will get to meet again.",
+                "I had a fight with my friend",
+                "Me and my friend are not talking anymore."
             
    ]
         },
@@ -329,22 +339,105 @@
                 "My family is extremely supportive and always motivates me.",
 	            "I love spending time with my family. Always cheers me up.",
                 "Everyday quarrels in my family cause great harm to my mental peace",
-                "Things aren’t going well in my family.",
+                "Things aren't going well in my family.",
                 "There are internal disputes in my family which ruin my mental health",
                 "Family issues have really made it difficult for me to stay happy.",
-                "My mother and my father don’t get along well lately and constant fights have affected our household peace.",
+                "My mother and my father don't get along well lately and constant fights have affected our household peace.",
                 "My mom and I are not getting along over some issue which has now started affecting me.",
                 "My sister and I never get well together and today she crossed all the limits by insulting me in front of all our friends. How do I bring an end to all this ?",
                 "My family treats me in a derogatory manner. They always insult me and look down upon me and this always infuriates me.",
                 "I am thinking of leaving my family.",
-                "My brother and I don’t share a healthy bond."
+                "My brother and I don't share a healthy bond.",
+                "I want to leave my family.",
+                "I am leaving my family.",
+                "I am facing family issues."
 
 
 
             
    ]
          
+        },
+        {
+            "tag": "financial",
+            "patterns": [
+                "I am going through a financial crisis.",
+                "I am feeling depressed because of my financial issues.",
+                "I have finally become financially independent!",
+                "I have become bankrupt and nothing is working fine for me",
+                "I do not have money to feed my family.",
+                "I am facing financial problems",
+                "I am financially strong",
+                "I am financially stable and independent",
+                "I feel financially secure",
+                "I am managing my finances well"
+                        
+            ]
+
+        },
+        {
+            "tag": "social",
+            "patterns": [
+                "I am feeling anxious while using social media.",
+                "I do not fit in my social media circle.",
+                "Social media is affecting my mood and mind",
+                "I feel depressed while surfing social media",
+                "I feel caught up in social media",
+                "I am enjoying my time on social media",
+                "Social media is really fun and helpful",
+                "Social media makes me feel bad about myself."
+                
+                        
+            ]
+
+        },
+        {
+            "tag": "wellness",
+            "patterns": [
+                "How are you",
+                "How r u",
+                "How are you doing",
+                "How you doing",
+                "How's you",
+                "Are you okay",
+                "How are you doing",
+                "Hope you are alright"
+                ],
+            "responses": [
+                "Yeah I am good, what about you?",
+                "Well Yes I am doing good. How are you?",
+                "I am Fine Thank You. Hope you are alright too.",
+                "I am great, thanks for asking"
+            ]
+        },
+        {
+        "tag": "career",
+            "patterns": [
+                "I am facing career problems.",
+                "I feel so lost in my career",
+                "I don't know how to keep going in my career",
+                "I received a great promotion that enhanced my career!",
+                "I was granted an award for building an excellent career! ",
+                "I love my career!",
+                "I have achieved great success in my career!",
+                "I feel sad working in my career field.",
+                "My career doesn't excite me anymore.",
+                "I have to do same mundane work everyday which makes me sad about my career",
+                "My career is not going well.",
+                "My career has come to a dead end.",
+                "I feel so stuck in my career. ",
+                "I am depressed about my career",
+                "My career has gotten boring and I feel sad about it.",
+                "I am anxious about my career goals",
+                "I feel sad that I am not progressing in my career",
+                "I am facing issues in pursuing my career"
+	
+                        
+     ], 
+            "responses": []
+
         }
+
 
 
 
