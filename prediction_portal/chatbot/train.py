@@ -39,6 +39,7 @@ for intent in intents['intents']:
 # stem and lower each word
 ignore_words = ['?', '.', '!']
 all_words = [stem(w) for w in all_words if w not in ignore_words]
+
 # remove duplicates and sort
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
@@ -66,8 +67,8 @@ for (pattern_sentence, tag) in xy:
 X_train = np.array(X_train)
 y_train = np.array(y_train)
 # X_train=X_train.astype(np.float32)
-print(X_train.shape)
-print(X_train[0])
+# print(X_train.shape)
+# print(X_train[0])
 
 
 # Hyper-parameters 
