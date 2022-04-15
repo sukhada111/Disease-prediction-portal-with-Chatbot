@@ -21,6 +21,7 @@ from home import views
 from pred import views as pred_views
 from register import views as v
 from medicine_info import views as view
+from chatbot import views as vi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,9 @@ urlpatterns = [
     path('register/',v.registration_view,name='register'),
     path('login/',v.login_view,name='login'),
     path('logout/',v.logout_view,name='logout'),
-    path('prediction/',pred_views.pred,name='prediction')
+    path('prediction/',pred_views.pred,name='prediction'),
+    path('chatbot/',vi.chat_page,name='chatbot'),
+    path('chatres/',vi.chat,name='chatres')
+
 
 ]

@@ -46,8 +46,10 @@ def read_glove_vecs(glove_file):
     return words_to_index, index_to_words, word_to_vec_map
 
 
-pathh=os.getcwd()+"\\ML Models\\glove.6B.50d.txt"
-word_to_index, index_to_word, word_to_vec_map = read_glove_vecs(pathh)
+pathh=os.getcwd()
+newpath = os.path.abspath(os.path.join(pathh, os.pardir))+"\\ML Models\\glove.6B.50d.txt"
+print(newpath)
+word_to_index, index_to_word, word_to_vec_map = read_glove_vecs(newpath)
 
 
 # Further data cleaning
@@ -310,8 +312,10 @@ def cleared(word):
     return res
 
 
-model_path=os.getcwd()+"\\ML Models\\BiLSTM_tune_1_rerun.h5"
-built_model=tensorflow.keras.models.load_model(model_path)
+model_path=os.getcwd()
+newmodelpath = os.path.abspath(os.path.join(model_path, os.pardir))+"\\ML Models\\BiLSTM_tune_1_rerun.h5"
+print(newmodelpath)
+built_model=tensorflow.keras.models.load_model(newmodelpath)
 
 def sentence_to_indices(sentence_words, max_len):
     X = np.zeros((max_len))
