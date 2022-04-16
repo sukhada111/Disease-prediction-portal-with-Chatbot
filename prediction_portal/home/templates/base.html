@@ -112,7 +112,7 @@ footer p{
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">ChatBot</a>
+                  <a class="nav-link" href="{% url 'chatbot' %}">ChatBot</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -121,8 +121,8 @@ footer p{
                   </a>
 
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Disease Prediction</a>
-                    <a class="dropdown-item" href="#">Medicine Information</a>
+                    <a class="dropdown-item" href="{% url 'prediction' %}">Disease Prediction</a>
+                    <a class="dropdown-item" href="{% url 'medicine_info' %}">Medicine Information</a>
                     
                   </div>
                 </li>

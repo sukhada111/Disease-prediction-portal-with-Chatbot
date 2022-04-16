@@ -79,7 +79,7 @@ class Chatbox {
             }
             else
             {
-                html += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
+                html += '<div class="messages__item messages__item--operator">' +  item.message + '</div>'
             }
           });
 

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Healthino Chatbot
+  Chatbot
 {% endblock title %}
 {% load static %}
 
@@ -9,24 +9,78 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap" rel="stylesheet">
+<a target="_blank" href="https://icons8.com/icon/lq7BYdxejdzR/user"></a>
+<script>
+
+    $(document).on('click', '.chatbox__button', function () {
+        console.log("Blue has been clicked");
+        // if($(this).hasClass("enableBlur")){
+        // $(this).removeClass('enableBlur');
+        // }
+        $("#bg").toggleClass("enableBlur");
+        $(".chatbox").addClass("disableBlur");
+    });
+    
+    </script>
+{% block style %}
+    <style>
+        body{
+            background-color: white;
+        }
+    .enableBlur>* {
+      filter: blur(10px);
+    }
+    .disableBlur {
+      filter: blur(0);
+    }
+
+    .bg-text{
+        color: rgb(95, 94, 94);
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+    }
+    h4, h5{
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 200;
+    }
+</style>
+{% endblock style %}
+
 {% endblock head %}
 
 {% block body %}
 
 <body>
-<div class="container">
+<div class="container" id="bg">
     <div class="row">
-        <img src="{% static 'bot-bg.jpg' %}" alt="Bot background" class="bgimage">
+        <div class="col-md-6 " style="margin-top: 8%;">
+            <h2 class="bg-text">
+                You don't have to Struggle in Silence.
+            </h2><br>
+            <h4>I am Healthino, your go-to friend to safeguard your mental well being and cheer you up always!</h4>
+            <br>
+            <h5>P.S. I am a very good listener :)
+            </h5>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'botnewbg.png' %}" alt="Bot background" class="bgimage">
+        </div>
+        
+        
     </div>
     <div class="chatbox">
         <div class="chatbox__support">
             <div class="chatbox__header">
                 <div class="chatbox__image--header">
-                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                    <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-chatbot-live-streaming-flaticons-lineal-color-flat-icons.png" style="margin-right: 15px; margin-bottom: 10px; margin-top: -2px;"/>                
                 </div>
                 <div class="chatbox__content--header">
-                    <h4 class="chatbox__heading--header">Healthino</h4>
-                    <p class="chatbox__description--header">Your friend to share all your worries with :)</p>
+                    <h4 class="chatbox__heading--header" style="margin-bottom: 0px; font-family: 'Nunito Sans', sans-serif;">Healthino</h4>
+                    <p class="chatbox__description--header" style="font-family: 'Nunito Sans', sans-serif;">Your friend to share all your worries with :)</p>
                 </div>
             </div>
             <div class="chatbox__messages">
@@ -39,8 +93,8 @@
                 <button class="chatbox__send--footer send__button">Send</button>
             </div>
         </div>
-        <div class="chatbox__button">
-            <button>Click Here</button>
+        <div class="chatbox__button" >
+            <button style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); background: rgb(247, 247, 247);"> <img src="{% static 'bubble-chat.png' %}" alt="Chat Icon" class="chat-bub" width="30px" height="30px"> Let's Chat </button>
         </div>
     </div>
 </div>
