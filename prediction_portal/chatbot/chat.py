@@ -137,9 +137,9 @@ def get_response(msg):
     X = bag_of_words(sentence, all_words)
     # max_word_len=394
     # X= predict_custom_tag(sentence,max_word_len)
-    print(X.shape)
+    # print(X.shape)
     X = X.reshape(1, X.shape[0])
-    print(X.shape)
+    # print(X.shape)
     X = torch.from_numpy(X).to(device)
     # X = torch.Tensor(X).to(device)
 
