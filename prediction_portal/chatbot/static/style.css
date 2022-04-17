@@ -19,13 +19,6 @@ body {
     --primary: #0d8265;
 }
 
-/* CHATBOX
-=============== */
-.chatbox {
-    position: absolute;
-    bottom: 80px !important;
-    right: 370px;
-}
 
 /* CONTENT IS CLOSE */
 .chatbox__support {

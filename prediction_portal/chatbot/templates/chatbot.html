@@ -47,6 +47,91 @@
         font-family: 'Nunito Sans', sans-serif;
         font-weight: 200;
     }
+    /* CHATBOX
+=============== */
+    .chatbox {
+        position: absolute;
+        bottom: 10% !important;
+        right: 27% !important;
+    }
+    @media screen and (max-width: 768px) {
+        .bgimage{
+            width: 500px;
+            margin-bottom: 5%;
+        }
+
+        .chatbox {
+        position: absolute;
+        bottom: -30% !important;
+        right: 15% !important;
+    }
+    .chatbox__support {
+    
+        height: 400px;
+        width: 400px !important;
+        margin-left: 3%;
+    
+}
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .chatbox {
+        position: absolute;
+        bottom: 15% !important;
+        right: 15% !important;
+    }
+    .bgimage{
+            margin-left: auto;
+            margin-right: 5%;
+            width: 500px;
+    
+        }
+        .chatbox__support {
+    
+        height: 350px;
+
+    }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .bgimage{
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            margin-bottom: 5%;
+        }
+
+        .chatbox {
+        position: absolute;
+        bottom: 10% !important;
+        right: 20% !important;
+    }
+    .chatbox__support {
+    
+        height: 450px;
+        width: 450px !important;
+    
+        }
+  
+    }
+
+    @media only screen and (min-width: 1200px) and (max-width: 1440px) {
+
+        .chatbox {
+        position: absolute;
+        bottom: 10% !important;
+        right: 25% !important;
+       }
+       .chatbox__support {
+    
+        height: 375px;
+        width: 700px !important;
+
+    }
+    }
+    .chatbox__support {
+    
+    height: 415px;
+}
+
 </style>
 {% endblock style %}
 
