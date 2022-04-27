@@ -57,8 +57,9 @@ class Chatbox {
           })
           .then(r => r.json())
           .then(r => {
-            let msg2 = { name: "Healthino", message: r.answer };
+            let msg2 = { name: "Healthino", message: r.answer};
             console.log(msg2);
+            // console.log(r.link);
             this.messages.push(msg2);
             this.updateChatText(chatbox);
             textField.value = '';
@@ -75,7 +76,28 @@ class Chatbox {
         this.messages.slice().reverse().forEach(function(item, index) {
             if (item.name === "Healthino")
             {
-                html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
+                // html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>';
+                // console.log(item.message[1]);
+                // let result = item.message.indexOf("https://www.youtube.com/");
+                // if(result!=-1){
+                //     html+='<div class="messages__item messages__item--visitor"><a href ='+ item.message.slice(result,item.message.length) +'></a></div>';
+                // }
+                function rep(text) {
+                    // Put the URL to variable $1 and Domain name
+                    // to $3 after visiting the URL
+                    var Rexp =
+        /(\b(https?|ftp|file):\/\/([-A-Z0-9+&@#%?=~_|!:,.;]*)([-A-Z0-9+&@#%?\/=~_|!:,.;]*)[-A-Z0-9+&@#\/%=~_|])/ig;
+                     
+                    // Replacing the RegExp content by HTML element
+                    return text.replace(Rexp,
+                            "<a href='$1' target='_blank'>$3</a>");
+                }
+                let str_html= rep(item.message)
+                console.log(str_html)
+                html += '<div class="messages__item messages__item--visitor">' + str_html + '</div>';
+                
+                
+        
             }
             else
             {

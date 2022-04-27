@@ -175,15 +175,16 @@ def get_response(msg):
                             level='sad'
                         
                     op_tag=tag+'_'+level
-                    return random.choice(response_dict[op_tag])
+                    return random.choice(response_dict[op_tag]), tag
                 
                 else:
                     #its an info tag
                     print(tag)
                     sentiment=predict_custom_tweet_sentiment(input_msg)
                     print(sentiment)
-                    return random.choice(intent['responses'])
+                    return random.choice(intent['responses']), tag
     else:
-        return "I do not understand..."
+        s = "I do not understand..."
+        return s, "not found"
 
   
