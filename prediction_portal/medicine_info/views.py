@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+@login_required
 def medicine_info(request):
 
     # Inp=input("Enter the Medicine Name: ")

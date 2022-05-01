@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -112,7 +114,7 @@ footer p{
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">ChatBot</a>
+                  <a class="nav-link" href="{% url 'chatbot' %}">ChatBot</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -121,8 +123,8 @@ footer p{
                   </a>
 
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Disease Prediction</a>
-                    <a class="dropdown-item" href="#">Medicine Information</a>
+                    <a class="dropdown-item" href="{% url 'prediction' %}">Disease Prediction</a>
+                    <a class="dropdown-item" href="{% url 'medicine_info' %}">Medicine Information</a>
                     
                   </div>
                 </li>

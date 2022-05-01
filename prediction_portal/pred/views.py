@@ -1,5 +1,7 @@
 
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+
 import requests
 import keras
 #importing the necessary libraries
@@ -182,6 +184,7 @@ def get_disease_name(symptoms_list):
 #      'Yellow Crust Ooze':'yellow_crust_ooze'
 # }
 
+@login_required
 def pred(request):
     if request.method=='GET':
         return render(request, 'predic.html')
