@@ -3,17 +3,17 @@ import json
 
 import torch
 
-from chatbot.model import NeuralNet
-from chatbot.nltk_utils import bag_of_words, tokenize
+from prediction_portal.chatbot.model import NeuralNet
+from prediction_portal.chatbot.nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 import os
-path=os.getcwd()+'\\chatbot\\intents.json'
+path=os.getcwd()+'\\prediction_portal\\chatbot\\intents.json'
 with open(path, 'r', encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
-FILE = os.getcwd()+"\\chatbot\\data.pth"
+FILE = os.getcwd()+"\\prediction_portal\\chatbot\\data.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]
@@ -29,7 +29,7 @@ model.eval()
 
 bot_name = "Healthino"
 
-from chatbot.sentiment_model import predict_custom_tag, predict_custom_tweet_sentiment
+from prediction_portal.chatbot.sentiment_model import predict_custom_tweet_sentiment
 
 response_dict={
 
@@ -175,15 +175,16 @@ def get_response(msg):
                             level='sad'
                         
                     op_tag=tag+'_'+level
-                    return random.choice(response_dict[op_tag])
+                    return random.choice(response_dict[op_tag]), tag
                 
                 else:
                     #its an info tag
                     print(tag)
                     sentiment=predict_custom_tweet_sentiment(input_msg)
                     print(sentiment)
-                    return random.choice(intent['responses'])
+                    return random.choice(intent['responses']), tag
     else:
-        return "I do not understand..."
+        s = "I do not understand..."
+        return s, "not found"
 
   

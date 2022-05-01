@@ -7,16 +7,16 @@
                 "Hii",
                 "Hey",
                 "Heyy",
-                "How are you?",
-                "How r u",
-                "How are you doing",
                 "Is anyone there?",
                 "You there?",
                 "What's up?",
                 "Hello",
                 "Hola",
                 "Good day",
-                "What's popping"
+                "What's popping",
+	            "Can you help me?",
+                "I need your help" ,
+                "Can we talk"      
             ],
             "responses": [
                 "Hey! Welcome to Healthino.",
@@ -24,9 +24,44 @@
                 "Hey there, my name's Healthino, your mental health friend. How can I help you today?"
             ]
         },
+
+ 
+{
+            "tag": "affirm",
+            "patterns": [
+                "Good",
+                "Fine",
+                "Okay",
+                "Alright",
+                "Cool Okay",
+                "Great",
+                "Oh Okay",
+                "Oh alright then",
+                "Gotcha"
+            ],
+            "responses": [
+                "Yes! Is there anything else you want to share?",
+                "Can I help you with anything else?",
+                "Need anything? I am always here to help!",
+                "Great! Let me know if you need any help from me.",
+                "Is there anything I can help you with?"
+                            ]
+        },
+
         {
             "tag": "goodbye",
-            "patterns": ["Bye", "See you later!", "Goodbye!", "Thank you", "Bubye!", "See yaa", "I gotta go"],
+            "patterns": [
+                "Bye",
+                "Byee",
+                "Byees",
+                "Bye bye",
+                "See you later!",
+                "Goodbye!",
+                "Thank you", 
+                "Bubye!", 
+                "See yaa", 
+                "I gotta go"
+            ],
             "responses": [
                 "See you later! Take care!",
                 "Have a lovely day! Take care and stay safe!",
@@ -38,13 +73,25 @@
             "patterns": [
                 "Thanks",
                 "Thank you",
+                "Thank you",
                 "That's helpful",
                 "Thanks a lot!",
                 "Thank you so much",
                 "Thankss",
-                "Thankyou"
+                "Thankyou",
+                "Thanks for your help!",
+                "Thanks man!",
+                "That was helpful",
+                "Thanks for helping me"
+
+	 
                 ],
-            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+            "responses": [
+                "Happy to help!",
+                "Any time!", 
+                "My pleasure", 
+                "Glad I could help!"
+            ]
         },
         {
             "tag": "about",
@@ -53,7 +100,6 @@
                 "Who are you?",
                 "What are you here for?",
                 "What can you help me with?",
-                "Is anyone there?",
                 "Are you a real person?",
                 "Tell me about yourself!",
                 "What can you do for me?",
@@ -75,7 +121,8 @@
                 "I'm feeling anxious but I don't know what it is exactly",
                 "I am feeling anxious",
                 "How do I know if I have anxiety",
-                "I think I have anxiety"
+                "I think I have anxiety",
+	            "I am feeling nervous"
             ],
             "responses": [
                 "I see that you want to learn more about anxiety, and how to support yourself or your loved ones. At the highest level, anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come.",
@@ -95,20 +142,23 @@
                 "How do I get rid of anxiety",
                 "I want relief from feeling anxious",
                 "How to tackle anxiety",
-                "Remedies for anxiety"
+                "Remedies for anxiety",
+                "How do I relieve my anxiety?",
+                "How do I relieve nervousness?",
+                "I wish I could stop feeling anxious"
             ],
             "responses": [
-                "I'm sorry to hear that. But don't worry, it will pass soon. In the meantime, I can help you out: try getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes.Whatever you're feeling is valid and completely normal. To relieve your anxiety, you can listen to this soothing music: https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation",
-                "Feeling anxious is completely normal and it is faced by a lot of people. Can you tell me more about what is going on with you? Sharing your feelings and worries always helps. Apart from sharing, listening to music will also help you to relieve your anxiety. You can listen to very soothing and relaxing music at: https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation",
-                "It seems like you are feeling a lot of things at the moment but it will get better soon. Here are a few ways to calm yourself and feel better: listen to a slow song, try to get fresh air or perhaps, visit a loved one or just share your thoughts with me! Here's a link to a very calming and soothing music which will help you to clear your mind: https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation"
+                "I'm sorry to hear that. But don't worry, it will pass soon. In the meantime, I can help you out: try getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes.Whatever you're feeling is valid and completely normal. To relieve your anxiety, you can listen to this soothing music: https://www.youtube.com/watch?v=79kpoGF8KWU",
+                "Feeling anxious is completely normal and it is faced by a lot of people. Can you tell me more about what is going on with you? Sharing your feelings and worries always helps. Apart from sharing, listening to music will also help you to relieve your anxiety. You can listen to very soothing and relaxing music at: https://www.youtube.com/watch?v=AImuCtIokl0",
+                "It seems like you are feeling a lot of things at the moment but it will get better soon. Here are a few ways to calm yourself and feel better: listen to a slow song, try to get fresh air or perhaps, visit a loved one or just share your thoughts with me! Here's a link to a very calming and soothing music which will help you to clear your mind: https://www.youtube.com/watch?v=Y6NP9P6BL8A"
 
             ]
         },
+
   
         {
             "tag": "depression",
             "patterns": [
-                "I think I have depression",
                 "What is depression?",
                 "Tell me about depression",
                 "Can I have some information about depression?",
@@ -117,7 +167,8 @@
                 "What does it mean to be depressed",
                 "Is depression the same as anxiety",
                 "What impacts can depression have on me",
-                "How does depression affect the body"  
+                "How does depression affect the body",
+                "What are the causes of depression?"  
             ],
             "responses": [
                 "I see that you want to learn more about depression. At the highest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem.",
@@ -126,27 +177,31 @@
                 
             ]
         },
-   {
+  {
             "tag": "depression relief",
             "patterns": [
-                
+                "I think I have depression",
+	            "I am feeling depressed",
+                "I want to get out of depression",
                 "How do I support a loved one with depression?",
                 "How do I fix someone's depression?",
                 "How do I fix my depression?",
-                "How do I relieve depression ?"
+                "How do I relieve depression ?",
+	            "I wish I could stop feeling sad and depressed"
       
           
             ],
             "responses": [
                 "I understand depression is tough to go through but the important thing is to reach out and know that everybody matters. A hug or a gentle touch of the hand or even a reassuring nod can get the message across. Firsty, relax a little bit. Follow: https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation",
   
-                "I know it is difficult to do so but reaching out is an important first step. If someone isn't ready to talk, continue to offer your support by spending time with them and try to check in regularly, either in person, on the phone, or by text. When you reach out to a friend, letting them know that you are going to be there every step of the way can be very reassuring. The first thing one must do is to calm themself. Listen to some music here: https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation",
+                "I know it is difficult to do so but reaching out is an important first step. If someone isn't ready to talk, continue to offer your support by spending time with them and try to check in regularly, either in person, on the phone, or by text. When you reach out to a friend, letting them know that you are going to be there every step of the way can be very reassuring. The first thing one must do is to calm themself. Listen to some music here: https://www.youtube.com/watch?v=9kzMf5kkQKg",
   
-                "It can be very common to isolate during depression but trust me if someone has not yet seen a doctor, encourage them to seek help and reassure them that there is nothing wrong with asking for assistance. Depression is a real and treatable illness. You must visit a counselor and share your problems with them. However, till then, listen to some soothing music here: https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation"
+                "It can be very common to isolate during depression but trust me if someone has not yet seen a doctor, encourage them to seek help and reassure them that there is nothing wrong with asking for assistance. Depression is a real and treatable illness. You must visit a counselor and share your problems with them. However, till then, listen to some soothing music here: https://www.youtube.com/watch?v=79kpoGF8KWU"
 
 
             ]
         },
+
   
         {
             "tag": "stress",
@@ -157,28 +212,36 @@
                 "How does stress affect my body?",
                 "Does stress have any positive impact?",
                 "What impacts does stress have?",
-                "What are the symptoms of stress?"
+                "What are the symptoms of stress?",
+                "Can you tell me about stress",
+                "What causes stress"
    
                    ],
             "responses": [
                 "I see that you want to know more about stress. Stress is a feeling of emotional or physical tension. It can come from any event or thought that makes you feel frustrated, angry, or nervous. Stress is your body's reaction to a challenge or demand. In short bursts, stress can be positive, such as when it helps you avoid danger or meet a deadline. The body's autonomic nervous system controls your heart rate, breathing, vision changes and more. Its built-in stress response, the fight-or-flight response, helps the body face stressful situations. Long-term (chronic) stress, continued activation of the stress response causes wear and tear on the body. Physical, emotional and behavioral symptoms develop."
             ]
         },
-  {
+ {
             "tag": "stress relief",
             "patterns": [
                 "I'm feeling stressed",
                 "I am feeling stressful",
                 "Tell me how I can relieve stress",
                 "How do I support a loved one feeling stressed?",
-                "How do you prevent a situation from getting too stressful to manage?"
+                "How do you prevent a situation from getting too stressful to manage?",
+                "How do I relieve my stress?",
+                "How to get out of stressful situations?",
+                "I want to get rid of my stress",
+                "I wish I could stop feeling stressed"
                    ],
             "responses": [
                 
-                "To be honest, stress works a lot like homework. You don't do it every day, and eventually, it's going to pile up into a huge mess. So the best solution is to deal with your problems, one at a time. Don't let it overwhelm you. Normally, it is not advised that you take medication for stress. This is because by taking medication, you will continue to ignore the issues at hand. Moreover, there is a possibility that you will develop a tolerance for the medication and might require a higher dosage, which eventually can lead to a lot of side effects.Therapy always helps. Go to:  https://www.youtube.com/watch?v=1ZYbU82GVz4&ab_channel=SoothingRelaxation and listen to some calming music."
+                "To be honest, stress works a lot like homework. You don't do it every day, and eventually, it's going to pile up into a huge mess. So the best solution is to deal with your problems, one at a time. Don't let it overwhelm you. Normally, it is not advised that you take medication for stress. This is because by taking medication, you will continue to ignore the issues at hand. Moreover, there is a possibility that you will develop a tolerance for the medication and might require a higher dosage, which eventually can lead to a lot of side effects.Therapy always helps. Go to:  https://www.youtube.com/watch?v=PNiLq-cZUBU and listen to some calming music.",
+                "You feel stressed because you choose to take stress. There is always an option, to not think about your worries and just take out some personal time to pursue your favourite hobby, something that refreshes you at the end of everyday. Furthermore, meditation and yoga helps a lot in coping with stress, check out this meditation video instant relief:  https://www.youtube.com/watch?v=U7g3Cciwxcc"
 
             ]
         },
+
         {
             "tag": "suicidal",
             "patterns": [
@@ -201,25 +264,47 @@
             "responses": [
                 "Ending your life is not the way out for any problem. No matter how big the problem is, running away from it will only lead to more issues. You need to calm yourself and follow some guidance or mentoring, please contact MPower:  1800-1208-20050 who can surely help you with your current situation.In collaboration with the Maharashtra Government and BMC, Mpower has launched a toll-free mental health support helpline having trained professionals at the onset of the pandemic in 2020.",
                 "Hey, at some point in life everyone feels low when things don't work in our favour. But ending your life is not the solution. You need to stay strong and face the situation, it will help you to become mentally strong and get better in life. You can follow the Sumaitri helpline number for consultation: +91 9315767849, which is a crisis intervention centre. ",
-                "Rather than thinking of such a drastic solution, you have to calm yourself and try to find a logical next step. Ending your life can obviously solve the problem for you but might have unimaginable consequences. You might be going through great stress, but that should not be leading you to such decisions. Running away from your problems is a loser's choice and you are surely not one. To get some good guidance contact Nimhans: 080-46110007, which is is offering free psychosocial support and mental health services to people."
+                "Rather than thinking of such a drastic solution, you have to calm yourself and try to find a logical next step. Ending your life can obviously solve the problem for you but might have unimaginable consequences. You might be going through great stress, but that should not be leading you to such decisions. Running away from your problems is a loser's choice and you are surely not one. To get some good guidance contact Nimhans: 080-46110007, which is offering free psychosocial support and mental health services to people."
             ]
         },
+
+
 
         {
             "tag": "sad",
             "patterns": [
                 "I'm feeling a bit sad",
                 "I am feeling sad",
+       	        "It's a gloomy day",
+                "I'm feeling down today",
                 "I have been feeling down lately",
                 "How do I tackle sadness?",
                 "How can I overcome my sad feelings?",
-                "Things that help to overcome sad moods"        
+                "Things that help to overcome sad moods",
+                "I feel so lonely",
+                "I feel so alone and lost",
+                "I am feeling horrible",
+                "I am so lonely",
+                "I wish I could talk to someone",
+                "I wish I could share my problems with someone",
+                "I wish someone would listen to me",
+                "If only there was someone to share my feelings with.",
+                "I want to share my feelings with someone",
+                "I wish there was someone to support me",
+                "I have no one to talk to",
+                "I feel so sad",
+                "I feel disturbed",
+                "I am feeling upset",
+                "My mind is disturbed",
+                "I am disturbed",
+                "Something is bothering me"
+                                            
    ],
             "responses": [
                 "That's alright. I am here to help you out and I'm sure you will feel better soon. Would you like to share what's bothering you? ", 
                 "That's okay and normal with all humans. If you feel comfortable, you are welcome to share your problems. Some activities that might help you include writing in a journal, listening to music, spending time with friends or family, andor drawing to express your emotions",
                 "Hey, don't worry, it's okay to feel that way sometimes. I'm right here as your listening companion, go on and tell me what's wrong",
-                "It's okay, don't be so hard on yourself. Do things that make you happy, be it getting back to a forgotten hobby, just listening to a soothing song or something as easy as treating yourself with your favourite food!"
+                "It's okay, don't be so hard on yourself. Do things that make you happy, be it getting back to a forgotten hobby, just listening to a soothing song or something as easy as treating yourself with your favourite food! Plus, you can always share your problems with me!"
             ]
         },
    
@@ -230,9 +315,21 @@
                 "I'm feeling particularly happy today",
                 "I am feeling elated!",
                 "I am feeling great",
+                "I am feeling excited!",
                 "I'm so happy, I can't wait to tell you all the amazing things that happened to me",
                 "I was very cheerful throughout the day",
-                "I am delighted over my success"
+                "I am feeling happy today",
+                "I am happy today",
+                "I am great",
+                "I am fine",
+                "I am just so happy",
+                "I feel amazing",
+                "I feel so good today",
+                "I am over the moon today",
+                "I am delighted over my success",
+                "Great things are happening with me",
+                "I had the best day today",
+                "Good times are here"
             
    ],
             "responses": [
@@ -267,7 +364,19 @@
                 "I am loving my married life with my partner. We both support each other and are having a great time in our lives. I hope it stays the same throughout our life",
                 "I and my partner got separated",
                 "I and my partner parted ways recently",
-                "My partner does not feel the same way about me."
+                "My partner does not feel the same way about me.",
+	            "My girlfriend left me",
+     	        "My boyfriend left me",
+	            "My fiance left me",
+                "My partner dumped me",
+	            "We are not on talking terms",
+ 	            "My partner didn't treat me well",
+	            "My partner abuses me",
+	            "My husband doesn't love me anymore",
+	            "My wife doesn't love me anymore",
+	            "I don't want to be with my partner",
+    	        "I and my partner aren't together anymore",
+	            "My partner isn't talking to me"
 
    ]
         },
@@ -292,7 +401,12 @@
                 "I loved my first day at my new workplace and hope it stays the same throughout my life.",
                 "My boss and colleagues are so cooperative and helpful",
                 "I am facing issues at work.",
-                "I want to leave my job"            
+                "Issues at workplace have disturbed my mental peace",
+                "I want to leave my job",
+                "I lost my job",
+                "I am so done with my job",
+                "My job is so boring, it makes me depressed",
+                "I wish I had a different job"                        
    ]
         },
 
@@ -357,8 +471,17 @@
                 "One of my close friends suddenly stopped talking to me and I never got the chance to know what went wrong that affected our friendship so badly.",
                 "We had some really great memories together and I miss my best friend so much and I don't know when we will get to meet again.",
                 "I had a fight with my friend",
-                "Me and my friend are not talking anymore."
-            
+                "Me and my friend are not talking anymore.",
+                "I fought with my best friend",
+                "My best friend fought with me",
+                "I wish we were still friends",
+                "My best friend is not talking to me anymore.",
+                "Me and my friend are not on talking terms",
+                "I wish my friend was here with me.",
+                "I wish I hadn't fought with my friend."
+
+
+
    ]
         },
 
@@ -381,10 +504,16 @@
                 "My brother and I don't share a healthy bond.",
                 "I want to leave my family.",
                 "I am leaving my family.",
-                "I am facing family issues."
-
-
-
+                "I am facing family issues.",
+	            "I am facing family problems",
+                "I wish my family treated me better",
+                "I have fights with my family",
+                "My family doesn't love me",
+                "My family doesn't like me",
+                "I can't stay with my family anymore",
+                "My family keeps degrading me",
+                "My family is my happy place",
+                "My family makes me feel happy and loved"                  
             
    ]
          
@@ -401,8 +530,12 @@
                 "I am financially strong",
                 "I am financially stable and independent",
                 "I feel financially secure",
-                "I am managing my finances well"
-                        
+                "I am managing my finances well",
+                "I don't have enough money",
+                "I have less funds with me",
+                "I am doing well financially",
+                "I am not able to manage my finances"            
+                            
             ]
 
         },
@@ -416,7 +549,10 @@
                 "I feel caught up in social media",
                 "I am enjoying my time on social media",
                 "Social media is really fun and helpful",
-                "Social media makes me feel bad about myself."
+                "Social media makes me feel bad about myself.",
+                "Social media is becoming toxic for me",
+                "Social media makes me feel sad and depressed",
+                "Social media makes me feel lonely"      
                 
                         
             ]
@@ -461,7 +597,8 @@
                 "My career has gotten boring and I feel sad about it.",
                 "I am anxious about my career goals",
                 "I feel sad that I am not progressing in my career",
-                "I am facing issues in pursuing my career"
+                "I am facing issues in pursuing my career",
+                "I am failing at my career"
 	
                         
      ], 
@@ -469,10 +606,6 @@
 
         }
 
-
-
-
     ]
   }
   
-
