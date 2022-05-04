@@ -51,12 +51,14 @@ def medicine_info(request):
             result5 = Soup1.find(id='np_tab5')
             
             result7 = Soup1.find('div',class_="right-block")
-
-            Uses = result1.find_all('div', class_='inner-content')
+            try:
+                Uses = result1.find_all('div', class_='inner-content')
+                
+                Side_Effects = result5.find_all('div', class_='inner-content')
             
-            Side_Effects = result5.find_all('div', class_='inner-content')
-        
-            alternatives =result7.find_all('div', class_='info')
+                alternatives =result7.find_all('div', class_='info')
+            except:
+                return render(request, 'medicine_info/medicine_info.html',{'error':"Couldn't load data for given medicine."})
 
             alt=[]
             uses=[]

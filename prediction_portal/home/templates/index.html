@@ -117,10 +117,15 @@ div.card {
         <h1 class="header_text">Healthino - Improving Lives Together</h1>
         <P class="tagline">The personal health monitoring assistant of every individual. The portal aims at providing health related assistance through disease prediction and solving mental health issues using an AI Chatbot through which the patients can converse openly and get health related guidance.
         </P>
-        <button class="btn btn-danger btn-header">Explore</button>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'chatbot' %}"><button class="btn btn-danger btn-header">Explore</button></a>
+
+        {% else %}
+        <a href="{% url 'register' %}"><button class="btn btn-danger btn-header">Explore</button></a> 
+        {% endif %}
       </div>
     </div>
-    <i class="fa fa-angle-double-down blink" aria-hidden="true"></i>
+    <a href="#features"><i class="fa fa-angle-double-down blink" aria-hidden="true"></i></a>
 </div>
 {% if request.user.is_authenticated %}
 <div class="container">
@@ -131,7 +136,7 @@ div.card {
   </div>
 </div>
 {% endif %}
-<div class="container feature-section">
+<div class="container feature-section" id="features">
   <div class="row" style="margin-top: 80px; margin-bottom: -30px;">
     <div class="col-md-6 section-one-text">
       <h2>Mental wellness plays a role</h2>
